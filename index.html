@@ -1,0 +1,2890 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quran Class Digitization Presentation</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+    body { font-family: 'Inter', sans-serif; }
+    .font-arabic { font-family: 'Traditional Arabic', 'Arabic Typesetting', serif; }
+    html { scroll-behavior: smooth; }
+    .nav-item.active { background: linear-gradient(to right, rgb(5, 150, 105), rgb(20, 184, 166)); color: #fff; box-shadow: 0 10px 25px rgba(16, 185, 129, 0.35); }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-emerald-50 via-amber-50 to-teal-50">
+<div class="min-h-screen bg-gradient-to-br from-emerald-50 via-amber-50 to-teal-50">
+      
+      <div class="fixed inset-0 opacity-5 pointer-events-none">
+                <div class="absolute inset-0" style="background-image: url(&quot;data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23047857' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E&quot;); background-size: 60px 60px;"></div>
+      </div>
+
+      
+      <button id="navToggle" type="button" aria-label="Toggle navigation" class="fixed top-6 right-6 z-50 bg-gradient-to-br from-emerald-600 to-teal-700 text-white p-3 rounded-full shadow-2xl hover:scale-110 transition-transform border-2 border-amber-400">
+  <i data-lucide="book-open" class="w-6 h-6"></i>
+</button>
+
+      <div id="navOverlay" class="fixed inset-0 bg-black/40 z-30 hidden"></div>
+<div id="navPanel" class="fixed top-0 right-0 h-screen w-80 bg-white shadow-2xl z-40 overflow-y-auto border-l-4 border-emerald-600 transform translate-x-full transition-transform duration-300">
+  <div class="p-6 bg-gradient-to-br from-emerald-600 to-teal-700 text-white">
+    <h3 class="text-xl font-bold mb-2">Navigation</h3>
+    <p class="text-sm text-emerald-100"></p>
+  </div>
+  <div class="p-4">
+    <div id="navItems" class="space-y-1"></div>
+  </div>
+</div>
+
+      
+      <section id="intro" class="min-h-screen flex items-center justify-center relative overflow-hidden px-6">
+        <div class="absolute inset-0">
+          <div class="absolute inset-0 bg-gradient-to-br from-emerald-900/90 via-teal-900/90 to-emerald-800/90" ></div>
+          <div class="absolute top-10 left-10 w-64 h-64 bg-amber-400/20 rounded-full blur-3xl" ></div>
+          <div class="absolute bottom-10 right-10 w-96 h-96 bg-emerald-400/20 rounded-full blur-3xl" ></div>
+        </div>
+        <div class="relative max-w-5xl mx-auto text-center text-white">
+          
+          <div class="mb-8 inline-block">
+            <div class="relative">
+              <div class="w-40 h-40 mx-auto bg-gradient-to-br from-amber-400 via-amber-500 to-amber-600 rounded-full flex items-center justify-center shadow-2xl border-4 border-white/20">
+                <i data-lucide="book-open" class="w-20 h-20 text-white" ></i>
+              </div>
+              <div class="absolute -top-2 -right-2 w-12 h-12 bg-emerald-500 rounded-full flex items-center justify-center border-2 border-white">
+                <i data-lucide="star" class="w-6 h-6 text-white" ></i>
+              </div>
+            </div>
+          </div>
+          
+          <div class="mb-4 text-2xl font-arabic text-amber-300 tracking-wide">
+            بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ
+          </div>
+          
+          <h1 class="text-6xl md:text-7xl font-bold mb-6 leading-tight">
+            Quran Class Digitization
+          </h1>
+          <div class="w-32 h-1 bg-gradient-to-r from-transparent via-amber-400 to-transparent mx-auto mb-6" ></div>
+          <p class="text-2xl md:text-3xl mb-12 font-light text-emerald-100">
+            & Quran Learning Journey Platform
+          </p>
+          
+          <div class="flex flex-wrap gap-4 justify-center text-sm">
+            <div class="flex items-center gap-2 bg-white/10 backdrop-blur-md px-6 py-3 rounded-full border border-white/20 shadow-lg">
+              <i data-lucide="users" class="w-5 h-5 text-amber-400" ></i>
+              <span>Student-Centric</span>
+            </div>
+            <div class="flex items-center gap-2 bg-white/10 backdrop-blur-md px-6 py-3 rounded-full border border-white/20 shadow-lg">
+              <i data-lucide="bar-chart-3" class="w-5 h-5 text-amber-400" ></i>
+              <span>Data-Driven</span>
+            </div>
+            <div class="flex items-center gap-2 bg-white/10 backdrop-blur-md px-6 py-3 rounded-full border border-white/20 shadow-lg">
+              <i data-lucide="target" class="w-5 h-5 text-amber-400" ></i>
+              <span>Goal-Oriented</span>
+            </div>
+            <div class="flex items-center gap-2 bg-white/10 backdrop-blur-md px-6 py-3 rounded-full border border-white/20 shadow-lg">
+              <i data-lucide="heart" class="w-5 h-5 text-amber-400" ></i>
+              <span>Scalable Growth</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="why" class="min-h-screen flex items-center px-6 py-20">
+        <div class="max-w-6xl mx-auto">
+          <div class="text-center mb-12">
+            <div class="inline-block px-6 py-2 bg-emerald-100 text-emerald-800 rounded-full text-sm font-semibold mb-4">
+              Opening Statement
+            </div>
+            <h2 class="text-5xl font-bold text-gray-800 mb-4">Why We Are Proposing Digitization</h2>
+            <div class="w-24 h-1 bg-gradient-to-r from-emerald-600 via-amber-500 to-teal-600 mx-auto" ></div>
+          </div>
+          
+          <div class="grid md:grid-cols-2 gap-8 mb-8">
+            <div class="bg-white p-8 rounded-2xl shadow-xl border-t-4 border-emerald-600">
+              <div class="flex items-center gap-3 mb-6">
+                <div class="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center">
+                  <i data-lucide="check-circle" class="w-6 h-6 text-emerald-600" ></i>
+                </div>
+                <h3 class="text-2xl font-semibold text-emerald-700">Our Quran classes already have strong foundations</h3>
+              </div>
+              <ul class="space-y-4 text-gray-700">
+                <li class="flex items-start gap-3 p-3 bg-emerald-50 rounded-lg">
+                  <i data-lucide="check-circle" class="w-5 h-5 text-emerald-600 mt-1 flex-shrink-0" ></i>
+                  <span>Dedicated students with strong commitment</span>
+                </li>
+                <li class="flex items-start gap-3 p-3 bg-emerald-50 rounded-lg">
+                  <i data-lucide="check-circle" class="w-5 h-5 text-emerald-600 mt-1 flex-shrink-0" ></i>
+                  <span>Committed teachers with deep knowledge</span>
+                </li>
+                <li class="flex items-start gap-3 p-3 bg-emerald-50 rounded-lg">
+                  <i data-lucide="check-circle" class="w-5 h-5 text-emerald-600 mt-1 flex-shrink-0" ></i>
+                  <span>Proven structure that works effectively</span>
+                </li>
+              </ul>
+            </div>
+            
+            <div class="bg-gradient-to-br from-emerald-600 to-teal-700 p-8 rounded-2xl shadow-xl text-white border-t-4 border-amber-400">
+              <div class="flex items-center gap-3 mb-6">
+                <div class="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center">
+                  <i data-lucide="star" class="w-6 h-6 text-amber-300" ></i>
+                </div>
+                <h3 class="text-2xl font-semibold">What We Bring</h3>
+              </div>
+              <ul class="space-y-4">
+                <li class="flex items-start gap-3 p-3 bg-white/10 rounded-lg backdrop-blur">
+                  <i data-lucide="star" class="w-5 h-5 text-amber-300 mt-1 flex-shrink-0" ></i>
+                  <span>Structure & Consistency across all batches</span>
+                </li>
+                <li class="flex items-start gap-3 p-3 bg-white/10 rounded-lg backdrop-blur">
+                  <i data-lucide="star" class="w-5 h-5 text-amber-300 mt-1 flex-shrink-0" ></i>
+                  <span>Accountability & Progress Tracking</span>
+                </li>
+                <li class="flex items-start gap-3 p-3 bg-white/10 rounded-lg backdrop-blur">
+                  <i data-lucide="star" class="w-5 h-5 text-amber-300 mt-1 flex-shrink-0" ></i>
+                  <span>Scalability & Sustainable Growth</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="bg-gradient-to-r from-amber-50 to-amber-100 border-l-4 border-amber-500 p-8 rounded-r-2xl shadow-lg">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 bg-amber-500 rounded-full flex items-center justify-center flex-shrink-0">
+                <i data-lucide="heart" class="w-6 h-6 text-white" ></i>
+              </div>
+              <div>
+                <p class="text-lg text-gray-800 font-semibold mb-2">The goal is not to replace existing practices, but to enhance, streamline, and scale them.</p>
+                <p class="text-gray-700 italic leading-relaxed">
+                  "We preserve the barakah and human elements of teaching while using technology to enhance, streamline, and scale our noble mission of Quran education."
+                </p>
+              </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      
+      <section id="challenges" class="min-h-screen flex items-center px-6 py-20 bg-white">
+        <div class="max-w-6xl mx-auto">
+          <div class="text-center mb-12">
+            <h2 class="text-5xl font-bold text-gray-800 mb-4">Current Challenges</h2>
+            <div class="w-24 h-1 bg-gradient-to-r from-emerald-600 via-amber-500 to-teal-600 mx-auto mb-4" ></div>
+            <p class="text-gray-600">Understanding the pain points in our current system</p>
+          </div>
+          
+          <div class="grid md:grid-cols-3 gap-6 items-start">
+            <div class="bg-gradient-to-br from-red-50 to-red-100 p-8 rounded-2xl border-2 border-red-200 shadow-lg flex flex-col h-full">
+              <div class="w-16 h-16 bg-red-500 rounded-full flex items-center justify-center mb-6 shadow-md">
+                <i data-lucide="alert-triangle" class="w-8 h-8 text-white"></i>
+              </div>
+              <h3 class="text-2xl font-semibold mb-4 text-red-800">Operational Challenges</h3>
+              <ul class="space-y-3 text-gray-700">
+                <li class="flex items-start gap-2">
+                  <div class="w-2 h-2 bg-red-500 rounded-full mt-2 flex-shrink-0"></div>
+                  <span><strong>Manual enrollment:</strong> slow, inconsistent, and error-prone via WhatsApp.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <div class="w-2 h-2 bg-red-500 rounded-full mt-2 flex-shrink-0"></div>
+                  <span><strong>Excel data storage:</strong> difficult to manage at scale, prone to mistakes.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <div class="w-2 h-2 bg-red-500 rounded-full mt-2 flex-shrink-0"></div>
+                  <span><strong>Manual Zoom links:</strong> leads to confusion and missed classes.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <div class="w-2 h-2 bg-red-500 rounded-full mt-2 flex-shrink-0"></div>
+                  <span><strong>Fragmented systems:</strong> no unified place for notes, revision, or quizzes.</span>
+                </li>
+              </ul>
+            </div>
+            
+            <div class="bg-gradient-to-br from-orange-50 to-orange-100 p-8 rounded-2xl border-2 border-orange-200 shadow-lg flex flex-col h-full">
+              <div class="w-16 h-16 bg-orange-500 rounded-full flex items-center justify-center mb-6 shadow-md">
+                <i data-lucide="book-open" class="w-8 h-8 text-white"></i>
+              </div>
+              <h3 class="text-2xl font-semibold mb-4 text-orange-800">Learning Challenges</h3>
+              <ul class="space-y-3 text-gray-700">
+                <li class="flex items-start gap-2">
+                  <div class="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>
+                  <span><strong>Multiple apps:</strong> Zoom, WhatsApp, Google Drive, Forms, Seerah books.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <div class="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>
+                  <span><strong>No learning path:</strong> students can’t see where they are in the journey.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <div class="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>
+                  <span><strong>No reminders:</strong> missing personalized nudges or revision tracking.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <div class="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>
+                  <span><strong>Scattered notes:</strong> reflections often lost or stored randomly.</span>
+                </li>
+              </ul>
+            </div>
+            
+            <div class="bg-gradient-to-br from-yellow-50 to-yellow-100 p-8 rounded-2xl border-2 border-yellow-200 shadow-lg flex flex-col h-full">
+              <div class="w-16 h-16 bg-yellow-500 rounded-full flex items-center justify-center mb-6 shadow-md">
+                <i data-lucide="bar-chart-3" class="w-8 h-8 text-white"></i>
+              </div>
+              <h3 class="text-2xl font-semibold mb-4 text-yellow-800">Teacher &amp; Coordinator Challenges</h3>
+              <ul class="space-y-3 text-gray-700">
+                <li class="flex items-start gap-2">
+                  <div class="w-2 h-2 bg-yellow-500 rounded-full mt-2 flex-shrink-0"></div>
+                  <span><strong>No clarity:</strong> who revised, listened to audio, or completed tasks.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <div class="w-2 h-2 bg-yellow-500 rounded-full mt-2 flex-shrink-0"></div>
+                  <span><strong>Manual tracking:</strong> high workload with limited oversight.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <div class="w-2 h-2 bg-yellow-500 rounded-full mt-2 flex-shrink-0"></div>
+                  <span><strong>No insights:</strong> hard to identify students needing support.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <div class="w-2 h-2 bg-yellow-500 rounded-full mt-2 flex-shrink-0"></div>
+                  <span><strong>No optimization:</strong> difficult to tailor teaching based on data.</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="mt-10 bg-amber-50 border border-amber-200 text-amber-900 px-6 py-4 rounded-2xl text-center shadow max-w-3xl mx-auto">
+            <p class="italic font-medium">"These challenges highlight the need for a unified digital platform that streamlines operations while enhancing the learning experience."</p>
+          </div>
+        </div>
+      </section>
+
+      
+      <section id="vision" class="min-h-screen flex items-center px-6 py-20 bg-gradient-to-br from-emerald-900 to-teal-900 text-white relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+          <div class="absolute top-20 left-20 w-96 h-96 bg-amber-400 rounded-full blur-3xl" ></div>
+          <div class="absolute bottom-20 right-20 w-96 h-96 bg-emerald-400 rounded-full blur-3xl" ></div>
+        </div>
+        
+        <div class="max-w-6xl mx-auto relative z-10">
+          <div class="text-center mb-16">
+            <div class="inline-block px-6 py-2 bg-amber-500/20 border border-amber-400/30 text-amber-300 rounded-full text-sm font-semibold mb-4">
+              Our Vision
+            </div>
+            <h2 class="text-5xl font-bold mb-4">Vision for Digital Transformation</h2>
+            <div class="w-24 h-1 bg-gradient-to-r from-amber-400 to-emerald-400 mx-auto" ></div>
+          </div>
+          
+          <div class="grid md:grid-cols-2 gap-12">
+            <div class="bg-white/10 backdrop-blur-lg p-8 rounded-2xl border border-white/20 shadow-2xl">
+              <h3 class="text-3xl font-semibold mb-4 text-amber-300 flex items-center gap-3">
+                <i data-lucide="sparkles" class="w-8 h-8"></i>
+                Vision
+              </h3>
+              <p class="text-lg text-emerald-100 leading-relaxed mb-6">
+                Create a unified, scalable, and spiritually uplifting digital ecosystem that modernizes the entire Quran class process—from enrollment to learning, revision, assessments, and lifelong progress tracking.
+              </p>
+              <div>
+                <p class="text-xs uppercase tracking-[0.4em] text-amber-200 mb-3">Strategic Objectives</p>
+                <ul class="space-y-3 text-lg">
+                  <li class="flex gap-3 p-3 bg-white/5 rounded-lg">
+                    <i data-lucide="check-circle" class="w-5 h-5 text-emerald-400 mt-1 flex-shrink-0"></i>
+                    <span>Increase learning quality and consistency.</span>
+                  </li>
+               
+                  <li class="flex gap-3 p-3 bg-white/5 rounded-lg">
+                    <i data-lucide="check-circle" class="w-5 h-5 text-emerald-400 mt-1 flex-shrink-0"></i>
+                    <span>Improve attendance, engagement, and retention.</span>
+                  </li>
+                  <li class="flex gap-3 p-3 bg-white/5 rounded-lg">
+                    <i data-lucide="check-circle" class="w-5 h-5 text-emerald-400 mt-1 flex-shrink-0"></i>
+                    <span>Empower coordinators and teachers with data-driven insights.</span>
+                  </li>
+                  <li class="flex gap-3 p-3 bg-white/5 rounded-lg">
+                    <i data-lucide="check-circle" class="w-5 h-5 text-emerald-400 mt-1 flex-shrink-0"></i>
+                    <span>Preserve the spiritual journey while enhancing accessibility.</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            
+            <div class="bg-white/10 backdrop-blur-lg p-8 rounded-2xl border border-white/20 shadow-2xl">
+              <h3 class="text-3xl font-semibold mb-6 text-amber-300 flex items-center gap-3">
+                <i data-lucide="target" class="w-8 h-8"></i>
+                Key Goals At A Glance
+              </h3>
+              <div class="grid sm:grid-cols-2 gap-4 text-gray-900">
+                <div class="bg-white/10 rounded-2xl p-4 border border-white/20">
+                  <div class="flex items-center gap-3 mb-2">
+                    <i data-lucide="book-open-check" class="w-5 h-5 text-amber-300"></i>
+                    <p class="text-lg font-semibold text-white">Learning Quality</p>
+                  </div>
+                  <p class="text-emerald-100 text-sm">Structured, deep understanding with spiritual engagement.</p>
+                </div>
+                <div class="bg-white/10 rounded-2xl p-4 border border-white/20">
+                  <div class="flex items-center gap-3 mb-2">
+                    <i data-lucide="bar-chart-3" class="w-5 h-5 text-amber-300"></i>
+                    <p class="text-lg font-semibold text-white">Data-Driven</p>
+                  </div>
+                  <p class="text-emerald-100 text-sm">Real-time insights for coordinators and teachers.</p>
+                </div>
+                <div class="bg-white/10 rounded-2xl p-4 border border-white/20">
+                  <div class="flex items-center gap-3 mb-2">
+                    <i data-lucide="users" class="w-5 h-5 text-amber-300"></i>
+                    <p class="text-lg font-semibold text-white">Student Engagement</p>
+                  </div>
+                  <p class="text-emerald-100 text-sm">Improved attendance, participation, and retention.</p>
+                </div>
+                <div class="bg-white/10 rounded-2xl p-4 border border-white/20">
+                  <div class="flex items-center gap-3 mb-2">
+                    <i data-lucide="globe" class="w-5 h-5 text-amber-300"></i>
+                    <p class="text-lg font-semibold text-white">Scalability</p>
+                  </div>
+                  <p class="text-emerald-100 text-sm">Supports growth across regions without losing quality.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="mt-12 text-center">
+            <div class="inline-block bg-amber-500/20 backdrop-blur-lg border border-amber-400/30 px-8 py-6 rounded-2xl">
+              <p class="text-xl font-light italic text-amber-100">
+                "An investment in the long-term quality, consistency, and growth of our Quran programs"
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <section id="platform" class="min-h-screen flex items-center px-6 py-20 bg-gradient-to-br from-gray-50 to-emerald-50">
+        <div class="max-w-7xl mx-auto w-full">
+          <div class="text-center mb-16">
+            <h2 class="text-5xl font-bold text-gray-800 mb-4">Complete Learning Ecosystem</h2>
+            <div class="w-24 h-1 bg-gradient-to-r from-emerald-600 via-amber-500 to-teal-600 mx-auto mb-4" ></div>
+            <p class="text-gray-600 text-lg">Not just a website, but a comprehensive platform</p>
+          </div>
+          
+                    <div class="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+            <div class="group bg-white p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-all hover:-translate-y-2 border-t-4 border-emerald-500 cursor-pointer">
+              <div class="w-16 h-16 bg-gradient-to-br from-emerald-500 to-emerald-700 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform shadow-lg">
+                <i data-lucide="users" class="w-8 h-8 text-white"></i>
+              </div>
+              <h3 class="font-semibold text-gray-800 mb-2 text-lg">Enrollment & Batch Management</h3>
+              <p class="text-sm text-gray-600">Structured intake process</p>
+            </div>
+            <div class="group bg-white p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-all hover:-translate-y-2 border-t-4 border-blue-500 cursor-pointer">
+              <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-700 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform shadow-lg">
+                <i data-lucide="video" class="w-8 h-8 text-white"></i>
+              </div>
+              <h3 class="font-semibold text-gray-800 mb-2 text-lg">Zoom Integration</h3>
+              <p class="text-sm text-gray-600">Seamless class attendance</p>
+            </div>
+            <div class="group bg-white p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-all hover:-translate-y-2 border-t-4 border-purple-500 cursor-pointer">
+              <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-700 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform shadow-lg">
+                <i data-lucide="book-open" class="w-8 h-8 text-white"></i>
+              </div>
+              <h3 class="font-semibold text-gray-800 mb-2 text-lg">23 Nabawi Stages</h3>
+              <p class="text-sm text-gray-600">Seerah-connected journey</p>
+            </div>
+            <div class="group bg-white p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-all hover:-translate-y-2 border-t-4 border-indigo-500 cursor-pointer">
+              <div class="w-16 h-16 bg-gradient-to-br from-indigo-500 to-indigo-700 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform shadow-lg">
+                <i data-lucide="file-text" class="w-8 h-8 text-white"></i>
+              </div>
+              <h3 class="font-semibold text-gray-800 mb-2 text-lg">Surah Modules</h3>
+              <p class="text-sm text-gray-600">Deep contextual learning</p>
+            </div>
+            <div class="group bg-white p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-all hover:-translate-y-2 border-t-4 border-amber-500 cursor-pointer">
+              <div class="w-16 h-16 bg-gradient-to-br from-amber-500 to-amber-600 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform shadow-lg">
+                <i data-lucide="award" class="w-8 h-8 text-white"></i>
+              </div>
+              <h3 class="font-semibold text-gray-800 mb-2 text-lg">Quizzes & Assessments</h3>
+              <p class="text-sm text-gray-600">Knowledge verification</p>
+            </div>
+            <div class="group bg-white p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-all hover:-translate-y-2 border-t-4 border-green-500 cursor-pointer">
+              <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-green-700 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform shadow-lg">
+                <i data-lucide="bar-chart-3" class="w-8 h-8 text-white"></i>
+              </div>
+              <h3 class="font-semibold text-gray-800 mb-2 text-lg">Analytics Dashboard</h3>
+              <p class="text-sm text-gray-600">Data-driven insights</p>
+            </div>
+            <div class="group bg-white p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-all hover:-translate-y-2 border-t-4 border-pink-500 cursor-pointer">
+              <div class="w-16 h-16 bg-gradient-to-br from-pink-500 to-pink-700 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform shadow-lg">
+                <i data-lucide="pen-tool" class="w-8 h-8 text-white"></i>
+              </div>
+              <h3 class="font-semibold text-gray-800 mb-2 text-lg">Notes & Reflection</h3>
+              <p class="text-sm text-gray-600">Personal tadabbur</p>
+            </div>
+            <div class="group bg-white p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-all hover:-translate-y-2 border-t-4 border-orange-500 cursor-pointer">
+              <div class="w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform shadow-lg">
+                <i data-lucide="calendar" class="w-8 h-8 text-white"></i>
+              </div>
+              <h3 class="font-semibold text-gray-800 mb-2 text-lg">Task Management</h3>
+              <p class="text-sm text-gray-600">Weekly accountability</p>
+            </div>
+          </div>
+
+        </div>
+      </section>
+      
+      <section id="benefits" class="min-h-screen flex items-center px-6 py-20 bg-gradient-to-br from-emerald-50 via-white to-amber-50">
+        <div class="max-w-6xl mx-auto w-full">
+          <div class="text-center mb-12">
+            <div class="inline-block px-6 py-2 bg-emerald-100 text-emerald-800 rounded-full text-sm font-semibold mb-4">
+              Benefits to Stakeholders
+            </div>
+            <h2 class="text-5xl font-bold text-gray-900 mb-4">Benefits Across All Stakeholders</h2>
+            <p class="text-gray-600 text-lg">Each persona sees measurable value from the platform &mdash; from students to leadership.</p>
+          </div>
+          
+          <div class="bg-white rounded-3xl shadow-2xl border-4 border-emerald-200 p-8 space-y-8">
+            <div class="grid gap-6 md:grid-cols-3">
+              <div class="bg-white border border-emerald-100 rounded-2xl p-6 shadow-lg">
+                <div class="flex items-center gap-3 mb-4">
+                  <div class="w-12 h-12 rounded-xl bg-emerald-600 text-white flex items-center justify-center shadow-md">
+                    <i data-lucide="users" class="w-6 h-6"></i>
+                  </div>
+                  <div>
+                    <p class="text-xs uppercase tracking-widest text-emerald-600 font-semibold">Students</p>
+                    <h3 class="text-2xl font-semibold text-gray-900">Clarity &amp; Growth</h3>
+                  </div>
+                </div>
+                <p class="text-gray-700">Clear structure, deeper understanding, and easier revision support steady spiritual and academic growth.</p>
+              </div>
+              
+              <div class="bg-white border border-emerald-100 rounded-2xl p-6 shadow-lg">
+                <div class="flex items-center gap-3 mb-4">
+                  <div class="w-12 h-12 rounded-xl bg-emerald-600 text-white flex items-center justify-center shadow-md">
+                    <i data-lucide="user-check" class="w-6 h-6"></i>
+                  </div>
+                  <div>
+                    <p class="text-xs uppercase tracking-widest text-emerald-600 font-semibold">Coordinators</p>
+                    <h3 class="text-2xl font-semibold text-gray-900">Mentor with Precision</h3>
+                  </div>
+                </div>
+                <p class="text-gray-700">Less manual follow-up, more targeted mentoring powered by insights and alerts.</p>
+              </div>
+              
+              <div class="bg-white border border-emerald-100 rounded-2xl p-6 shadow-lg">
+                <div class="flex items-center gap-3 mb-4">
+                  <div class="w-12 h-12 rounded-xl bg-emerald-600 text-white flex items-center justify-center shadow-md">
+                    <i data-lucide="book-open-check" class="w-6 h-6"></i>
+                  </div>
+                  <div>
+                    <p class="text-xs uppercase tracking-widest text-emerald-600 font-semibold">Teachers</p>
+                    <h3 class="text-2xl font-semibold text-gray-900">Data-Driven Impact</h3>
+                  </div>
+                </div>
+                <p class="text-gray-700">Dashboards highlight student readiness and gaps, enabling intentional teaching moments.</p>
+              </div>
+            </div>
+            
+            <div class="grid gap-6 md:grid-cols-2">
+              <div class="bg-white border border-emerald-100 rounded-2xl p-6 shadow-lg">
+                <div class="flex items-center gap-3 mb-4">
+                  <div class="w-12 h-12 rounded-xl bg-emerald-600 text-white flex items-center justify-center shadow-md">
+                    <i data-lucide="settings" class="w-6 h-6"></i>
+                  </div>
+                  <div>
+                    <p class="text-xs uppercase tracking-widest text-emerald-600 font-semibold">Admin</p>
+                    <h3 class="text-2xl font-semibold text-gray-900">Centralized Operations</h3>
+                  </div>
+                </div>
+                <p class="text-gray-700">Unified workflows, automated tasks, and single-source data for efficient governance.</p>
+              </div>
+              
+              <div class="bg-white border border-emerald-100 rounded-2xl p-6 shadow-lg">
+                <div class="flex items-center gap-3 mb-4">
+                  <div class="w-12 h-12 rounded-xl bg-emerald-600 text-white flex items-center justify-center shadow-md">
+                    <i data-lucide="star" class="w-6 h-6"></i>
+                  </div>
+                  <div>
+                    <p class="text-xs uppercase tracking-widest text-emerald-600 font-semibold">Leadership</p>
+                    <h3 class="text-2xl font-semibold text-gray-900">Scale with Confidence</h3>
+                  </div>
+                </div>
+                <p class="text-gray-700">Transparent dashboards ensure quality, accountability, and credible reporting for stakeholders.</p>
+              </div>
+            </div>
+            
+            <div class="bg-gradient-to-r from-emerald-600 to-teal-600 text-white rounded-3xl p-8 shadow-2xl border-l-4 border-amber-400">
+              <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+                <div class="flex items-center gap-4">
+                  <div class="w-14 h-14 rounded-full bg-white/20 flex items-center justify-center">
+                    <i data-lucide="heart" class="w-7 h-7 text-white"></i>
+                  </div>
+                  <div>
+                    <p class="uppercase text-sm tracking-widest text-amber-200">Stakeholder Reasoning</p>
+                    <h4 class="text-2xl font-semibold text-white">Value Across the Ecosystem</h4>
+                  </div>
+                </div>
+                <p class="text-lg text-emerald-50 md:flex-1">The platform delivers value at every level, ensuring alignment, accountability, and shared success.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <section id="enrollment" class="min-h-screen flex items-center px-6 py-20 bg-white">
+        <div class="max-w-6xl mx-auto w-full">
+          <div class="text-center mb-12">
+            <div class="inline-block px-6 py-2 bg-emerald-100 text-emerald-800 rounded-full text-sm font-semibold mb-4">
+              Enrollment Flow (Digitalized)
+            </div>
+            <h2 class="text-5xl font-bold text-gray-800 mb-4">Digital Enrollment & Batch Assignment</h2>
+            <p class="text-gray-600 text-lg">Structured, scalable intake that keeps every stakeholder aligned</p>
+          </div>
+          
+          <div class="bg-white rounded-3xl shadow-2xl border-4 border-emerald-200 p-8 space-y-10">
+          <div class="grid gap-6 md:grid-cols-2">
+            <div class="bg-gradient-to-br from-emerald-50 to-white border border-emerald-100 rounded-2xl p-6 shadow-lg">
+              <div class="flex items-center gap-3 mb-4">
+                <div class="w-14 h-14 rounded-2xl bg-emerald-600 text-white flex items-center justify-center shadow-md">
+                  <i data-lucide="file-text" class="w-7 h-7"></i>
+                </div>
+                <div>
+                  <p class="text-xs uppercase tracking-wider text-emerald-600 font-semibold">Step 1</p>
+                  <h3 class="text-2xl font-semibold text-gray-900">Online Enrollment Form</h3>
+                </div>
+              </div>
+              <ul class="space-y-3 text-gray-700">
+                <li class="flex gap-2">
+                  <i data-lucide="check-circle" class="w-4 h-4 text-emerald-600 mt-1"></i>
+                  <span>Students complete a structured application with name, age, country, and motivation.</span>
+                </li>
+                <li class="flex gap-2">
+                  <i data-lucide="check-circle" class="w-4 h-4 text-emerald-600 mt-1"></i>
+                  <span>Availability & preferred time zones captured for smart scheduling.</span>
+                </li>
+              </ul>
+            </div>
+            
+            <div class="bg-gradient-to-br from-amber-50 to-white border border-amber-100 rounded-2xl p-6 shadow-lg">
+              <div class="flex items-center gap-3 mb-4">
+                <div class="w-14 h-14 rounded-2xl bg-amber-500 text-white flex items-center justify-center shadow-md">
+                  <i data-lucide="clipboard-check" class="w-7 h-7"></i>
+                </div>
+                <div>
+                  <p class="text-xs uppercase tracking-wider text-amber-600 font-semibold">Step 2</p>
+                  <h3 class="text-2xl font-semibold text-gray-900">Review & Decision</h3>
+                </div>
+              </div>
+              <ul class="space-y-3 text-gray-700">
+                <li class="flex gap-2">
+                  <i data-lucide="users" class="w-4 h-4 text-amber-600 mt-1"></i>
+                  <span>Admins and organizers review submissions together.</span>
+                </li>
+                <li class="flex gap-2">
+                  <i data-lucide="flag" class="w-4 h-4 text-amber-600 mt-1"></i>
+                  <span>Statuses applied with one click: Accepted, Waiting List, or Rejected.</span>
+                </li>
+              </ul>
+            </div>
+            
+            <div class="bg-gradient-to-br from-blue-50 to-white border border-blue-100 rounded-2xl p-6 shadow-lg">
+              <div class="flex items-center gap-3 mb-4">
+                <div class="w-14 h-14 rounded-2xl bg-blue-500 text-white flex items-center justify-center shadow-md">
+                  <i data-lucide="layers" class="w-7 h-7"></i>
+                </div>
+                <div>
+                  <p class="text-xs uppercase tracking-wider text-blue-600 font-semibold">Step 3</p>
+                  <h3 class="text-2xl font-semibold text-gray-900">Batch Assignment</h3>
+                </div>
+              </div>
+              <ul class="space-y-3 text-gray-700">
+                <li class="flex gap-2">
+                  <i data-lucide="map-pin" class="w-4 h-4 text-blue-600 mt-1"></i>
+                  <span>Assign batch codes (e.g., UAE-B01) with teacher and coordinator.</span>
+                </li>
+                <li class="flex gap-2">
+                  <i data-lucide="clock" class="w-4 h-4 text-blue-600 mt-1"></i>
+                  <span>Set class day, time, and timezone for smooth cross-region operations.</span>
+                </li>
+              </ul>
+            </div>
+            
+            <div class="bg-gradient-to-br from-purple-50 to-white border border-purple-100 rounded-2xl p-6 shadow-lg">
+              <div class="flex items-center gap-3 mb-4">
+                <div class="w-14 h-14 rounded-2xl bg-purple-600 text-white flex items-center justify-center shadow-md">
+                  <i data-lucide="log-in" class="w-7 h-7"></i>
+                </div>
+                <div>
+                  <p class="text-xs uppercase tracking-wider text-purple-600 font-semibold">Step 4</p>
+                  <h3 class="text-2xl font-semibold text-gray-900">Student Onboarding</h3>
+                </div>
+              </div>
+              <ul class="space-y-3 text-gray-700">
+                <li class="flex gap-2">
+                  <i data-lucide="mail" class="w-4 h-4 text-purple-600 mt-1"></i>
+                  <span>Students receive credentials instantly with login instructions.</span>
+                </li>
+                <li class="flex gap-2">
+                  <i data-lucide="info" class="w-4 h-4 text-purple-600 mt-1"></i>
+                  <span>Dashboard displays batch info, class timing, and expectations.</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="bg-gradient-to-r from-emerald-600 to-teal-600 text-white rounded-3xl p-8 shadow-2xl border-l-4 border-amber-400">
+            <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+              <div class="flex items-center gap-4">
+                <div class="w-16 h-16 rounded-full bg-white/20 flex items-center justify-center">
+                  <i data-lucide="sparkles" class="w-8 h-8 text-white"></i>
+                </div>
+                <div>
+                  <p class="uppercase text-sm tracking-widest text-amber-200">Stakeholder Reasoning</p>
+                  <h4 class="text-2xl font-semibold">Why Digitize Intake?</h4>
+                </div>
+              </div>
+              <p class="text-lg text-emerald-50 md:flex-1">Automating enrollment removes manual overhead, enforces consistent data capture, and makes adding new batches or regions as simple as duplicating a workflow.</p>
+            </div>
+          </div>
+          </div>
+        </div>
+      </section>
+      
+      <section id="dashboard" class="min-h-screen flex items-center px-6 py-20 bg-white">
+        <div class="max-w-6xl mx-auto">
+          <div class="text-center mb-12">
+            <h2 class="text-5xl font-bold text-gray-800 mb-4">Student Dashboard</h2>
+            <div class="w-24 h-1 bg-gradient-to-r from-emerald-600 via-amber-500 to-teal-600 mx-auto mb-4" ></div>
+            <p class="text-2xl text-emerald-700 font-semibold">"What should I do now?"</p>
+          </div>
+          
+          <div class="bg-gradient-to-br from-emerald-50 to-teal-50 rounded-3xl shadow-2xl p-8 border-2 border-emerald-200">
+            <div class="grid md:grid-cols-2 gap-6">
+              <div class="bg-white p-6 rounded-2xl shadow-md border-l-4 border-emerald-600">
+                <div class="flex items-center gap-3 mb-4">
+                  <div class="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center">
+                    <i data-lucide="clock" class="w-6 h-6 text-emerald-600" ></i>
+                  </div>
+                  <h4 class="text-xl font-semibold text-gray-800">Next Class</h4>
+                </div>
+                <ul class="space-y-2 text-gray-700">
+                  <li class="flex items-center gap-2">
+                    <i data-lucide="check-circle" class="w-4 h-4 text-emerald-600" ></i>
+                    <span>Surah & teacher information</span>
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <i data-lucide="check-circle" class="w-4 h-4 text-emerald-600" ></i>
+                    <span>Live countdown timer</span>
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <i data-lucide="check-circle" class="w-4 h-4 text-emerald-600" ></i>
+                    <span>"Join Class" button</span>
+                  </li>
+                </ul>
+              </div>
+              
+              <div class="bg-white p-6 rounded-2xl shadow-md border-l-4 border-blue-600">
+                <div class="flex items-center gap-3 mb-4">
+                  <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+                    <i data-lucide="check-check" class="w-6 h-6 text-blue-600" ></i>
+                  </div>
+                  <h4 class="text-xl font-semibold text-gray-800">Weekly Tasks</h4>
+                </div>
+                <ul class="space-y-2 text-gray-700">
+                  <li class="flex items-center gap-2">
+                    <i data-lucide="headphones" class="w-4 h-4 text-blue-600" ></i>
+                    <span>Listen to class audio</span>
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <i data-lucide="book-open" class="w-4 h-4 text-blue-600" ></i>
+                    <span>Review Surah module</span>
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <i data-lucide="pen-tool" class="w-4 h-4 text-blue-600" ></i>
+                    <span>Write reflection notes</span>
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <i data-lucide="award" class="w-4 h-4 text-blue-600" ></i>
+                    <span>Complete quiz</span>
+                  </li>
+                </ul>
+              </div>
+              
+              <div class="bg-white p-6 rounded-2xl shadow-md border-l-4 border-purple-600">
+                <div class="flex items-center gap-3 mb-4">
+                  <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center">
+                    <i data-lucide="trending-up" class="w-6 h-6 text-purple-600" ></i>
+                  </div>
+                  <h4 class="text-xl font-semibold text-gray-800">Progress Tracking</h4>
+                </div>
+                <ul class="space-y-2 text-gray-700">
+                  <li class="flex items-center gap-2">
+                    <i data-lucide="star" class="w-4 h-4 text-purple-600" ></i>
+                    <span>Current stage display</span>
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <i data-lucide="activity" class="w-4 h-4 text-purple-600" ></i>
+                    <span>Visual progress bar</span>
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <i data-lucide="check-circle" class="w-4 h-4 text-purple-600" ></i>
+                    <span>Completed stages</span>
+                  </li>
+                </ul>
+              </div>
+              
+              <div class="bg-white p-6 rounded-2xl shadow-md border-l-4 border-amber-600">
+                <div class="flex items-center gap-3 mb-4">
+                  <div class="w-12 h-12 bg-amber-100 rounded-lg flex items-center justify-center">
+                    <i data-lucide="zap" class="w-6 h-6 text-amber-600" ></i>
+                  </div>
+                  <h4 class="text-xl font-semibold text-gray-800">Quick Access</h4>
+                </div>
+                <ul class="space-y-2 text-gray-700">
+                  <li class="flex items-center gap-2">
+                    <i data-lucide="arrow-right" class="w-4 h-4 text-amber-600" ></i>
+                    <span>Jump to any Surah</span>
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <i data-lucide="volume-2" class="w-4 h-4 text-amber-600" ></i>
+                    <span>Access recordings</span>
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <i data-lucide="file-text" class="w-4 h-4 text-amber-600" ></i>
+                    <span>View all notes</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+        <section id="student-dashboard-example" class="min-h-screen flex items-center px-6 py-20 bg-gradient-to-br from-emerald-50 to-teal-50">
+        <div class="max-w-7xl mx-auto w-full">
+          <div class="text-center mb-12">
+            <div class="inline-block px-6 py-2 bg-emerald-600 text-white rounded-full text-sm font-semibold mb-4">
+              Dashboard Example
+            </div>
+            <h2 class="text-5xl font-bold text-gray-800 mb-4">Student Dashboard Interface</h2>
+            <div class="w-24 h-1 bg-gradient-to-r from-emerald-600 via-amber-500 to-teal-600 mx-auto" ></div>
+          </div>
+          
+          
+          <div class="bg-white rounded-3xl shadow-2xl overflow-hidden border-4 border-emerald-600">
+            
+            <div class="bg-gradient-to-r from-emerald-600 to-teal-700 p-6 text-white">
+              <div class="flex justify-between items-center">
+                <div>
+                  <p class="text-sm text-emerald-100 mb-1">السلام عليكم</p>
+                  <h3 class="text-2xl font-bold">Mohammed Osman</h3>
+                  <p class="text-emerald-100">UAE-B01 • Stage 5 Nabawi</p>
+                </div>
+                <div class="text-right">
+                  <div class="bg-white/20 backdrop-blur px-4 py-2 rounded-lg">
+                    <p class="text-xs text-emerald-100">Attendance Rate</p>
+                    <p class="text-2xl font-bold">92%</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            
+            <div class="p-6">
+              <div class="flex flex-col lg:flex-row gap-6">
+                <aside class="w-full lg:w-64 bg-emerald-50 border border-emerald-100 rounded-2xl p-5 shadow-sm">
+                  <div class="flex items-center justify-between mb-4">
+                    <h4 class="text-lg font-semibold text-emerald-900">Quick Navigation</h4>
+                    <i data-lucide="menu" class="w-5 h-5 text-emerald-500 lg:hidden"></i>
+                  </div>
+                  <nav class="space-y-2">
+                    <button class="w-full flex items-center justify-between px-4 py-3 rounded-xl text-sm font-semibold text-emerald-900 bg-white shadow border border-emerald-100">
+                      <span class="flex items-center gap-3">
+                        <i data-lucide="layout-dashboard" class="w-4 h-4 text-emerald-500"></i>
+                        Overview
+                      </span>
+                      <i data-lucide="chevron-right" class="w-4 h-4 text-emerald-400"></i>
+                    </button>
+                    <button class="w-full flex items-center justify-between px-4 py-3 rounded-xl text-sm font-semibold text-emerald-800 bg-emerald-100/60 border border-emerald-200">
+                      <span class="flex items-center gap-3">
+                        <i data-lucide="check-square" class="w-4 h-4 text-emerald-500"></i>
+                        Weekly Tasks
+                      </span>
+                      <span class="text-xs text-emerald-600 bg-white px-2 py-0.5 rounded-full">4</span>
+                    </button>
+                    <button class="w-full flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-semibold text-emerald-800 hover:bg-white border border-transparent hover:border-emerald-100 transition">
+                      <i data-lucide="book-open-check" class="w-4 h-4 text-emerald-500"></i>
+                      Surah Modules
+                    </button>
+                    <button class="w-full flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-semibold text-emerald-800 hover:bg-white border border-transparent hover:border-emerald-100 transition">
+                      <i data-lucide="pen-tool" class="w-4 h-4 text-emerald-500"></i>
+                      Notes &amp; Reflections
+                    </button>
+                    <button class="w-full flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-semibold text-emerald-800 hover:bg-white border border-transparent hover:border-emerald-100 transition">
+                      <i data-lucide="bar-chart-3" class="w-4 h-4 text-emerald-500"></i>
+                      Analytics
+                    </button>
+                  </nav>
+                </aside>
+                <div class="flex-1 space-y-6">
+              <div class="grid md:grid-cols-3 gap-6 mb-6">
+                
+                <div class="md:col-span-2 bg-gradient-to-br from-emerald-500 to-emerald-700 p-6 rounded-2xl text-white shadow-xl">
+                  <div class="flex items-center justify-between mb-4">
+                    <h4 class="text-xl font-semibold">Next Class</h4>
+                    <div class="bg-white/20 px-3 py-1 rounded-full text-sm">
+                      Today
+                    </div>
+                  </div>
+                  <h3 class="text-3xl font-bold mb-2">Surah Al-Mulk</h3>
+                  <p class="text-emerald-100 mb-4">Teacher: Ustad Mohammed Mujtaba</p>
+                  
+                  <div class="bg-white/20 backdrop-blur rounded-xl p-4 mb-4">
+                    <p class="text-sm mb-2">Class starts in:</p>
+                    <div class="flex gap-2 text-center">
+                      <div class="bg-white/20 backdrop-blur px-4 py-2 rounded-lg">
+                        <div class="text-2xl font-bold">02</div>
+                        <div class="text-xs">Hours</div>
+                      </div>
+                      <div class="text-2xl">:</div>
+                      <div class="bg-white/20 backdrop-blur px-4 py-2 rounded-lg">
+                        <div class="text-2xl font-bold">34</div>
+                        <div class="text-xs">Minutes</div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <button class="w-full bg-amber-500 hover:bg-amber-600 text-white font-semibold py-3 px-6 rounded-xl transition-all flex items-center justify-center gap-2">
+                    <i data-lucide="video" class="w-5 h-5" ></i>
+                    Join Class (Opens 15 min before)
+                  </button>
+                </div>
+                
+                
+                <div class="bg-gradient-to-br from-purple-50 to-purple-100 p-6 rounded-2xl border-2 border-purple-200">
+                  <h4 class="text-lg font-semibold text-gray-800 mb-4">Your Journey</h4>
+                  <div class="text-center mb-4">
+                    <div class="w-24 h-24 mx-auto bg-gradient-to-br from-purple-500 to-purple-700 rounded-full flex items-center justify-center text-white mb-3 shadow-lg">
+                      <div>
+                        <div class="text-2xl font-bold">5</div>
+                        <div class="text-xs">Nabawi</div>
+                      </div>
+                    </div>
+                    <p class="text-sm text-gray-600">Stage 5 of 23</p>
+                  </div>
+                  <div class="bg-white rounded-lg p-3">
+                    <div class="flex justify-between text-xs text-gray-600 mb-2">
+                      <span>Progress</span>
+                      <span>22%</span>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full h-2">
+                      <div class="bg-gradient-to-r from-purple-500 to-purple-700 h-2 rounded-full" style="width: 22%;" ></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              
+              <div class="bg-gradient-to-r from-blue-50 to-teal-50 p-6 rounded-2xl mb-6 border-2 border-blue-200">
+                <h4 class="text-xl font-semibold text-gray-800 mb-4 flex items-center gap-2">
+                  <i data-lucide="check-check" class="w-6 h-6 text-blue-600" ></i>
+                  This Week's Tasks
+                </h4>
+                <div class="grid md:grid-cols-2 gap-3">
+                  <div class="bg-white p-4 rounded-xl flex items-center justify-between">
+                    <div class="flex items-center gap-3">
+                      <div class="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center">
+                        <i data-lucide="check-circle" class="w-5 h-5 text-green-600" ></i>
+                      </div>
+                      <div>
+                        <p class="font-semibold text-gray-800">Listen to Audio</p>
+                        <p class="text-xs text-gray-500">Completed</p>
+                      </div>
+                    </div>
+                    <i data-lucide="check-circle" class="w-6 h-6 text-green-600" ></i>
+                  </div>
+                  
+                  <div class="bg-white p-4 rounded-xl flex items-center justify-between">
+                    <div class="flex items-center gap-3">
+                      <div class="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center">
+                        <i data-lucide="check-circle" class="w-5 h-5 text-green-600" ></i>
+                      </div>
+                      <div>
+                        <p class="font-semibold text-gray-800">Review Surah</p>
+                        <p class="text-xs text-gray-500">Completed</p>
+                      </div>
+                    </div>
+                    <i data-lucide="check-circle" class="w-6 h-6 text-green-600" ></i>
+                  </div>
+                  
+                  <div class="bg-white p-4 rounded-xl flex items-center justify-between border-2 border-amber-300">
+                    <div class="flex items-center gap-3">
+                      <div class="w-10 h-10 bg-amber-100 rounded-lg flex items-center justify-center">
+                        <i data-lucide="pen-tool" class="w-5 h-5 text-amber-600" ></i>
+                      </div>
+                      <div>
+                        <p class="font-semibold text-gray-800">Write Notes</p>
+                        <p class="text-xs text-amber-600">In Progress</p>
+                      </div>
+                    </div>
+                    <i data-lucide="clock" class="w-6 h-6 text-amber-600" ></i>
+                  </div>
+                  
+                  <div class="bg-white p-4 rounded-xl flex items-center justify-between opacity-75">
+                    <div class="flex items-center gap-3">
+                      <div class="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center">
+                        <i data-lucide="award" class="w-5 h-5 text-gray-400" ></i>
+                      </div>
+                      <div>
+                        <p class="font-semibold text-gray-800">Complete Quiz</p>
+                        <p class="text-xs text-gray-500">Not Started</p>
+                      </div>
+                    </div>
+                    <div class="w-6 h-6 border-2 border-gray-300 rounded-full" ></div>
+                  </div>
+                </div>
+              </div>
+              
+              
+              <div class="bg-gray-50 p-6 rounded-2xl">
+                <h4 class="text-xl font-semibold text-gray-800 mb-4">Recent Surahs</h4>
+                                <div class="grid gap-4 sm:grid-cols-2 md:grid-cols-3">
+                  <div class="bg-white p-4 rounded-xl hover:shadow-md transition-shadow cursor-pointer">
+                    <div class="flex items-center justify-between mb-2">
+                      <h5 class="font-semibold text-gray-800">Al-Mulk</h5>
+                      <i data-lucide="arrow-right" class="w-4 h-4 text-emerald-600"></i>
+                    </div>
+                    <p class="text-xs text-gray-500 mb-3">Stage 5 Nabawi - Makki</p>
+                    <div class="flex gap-2">
+                      <button class="flex-1 bg-emerald-100 text-emerald-700 py-2 px-3 rounded-lg text-xs font-semibold hover:bg-emerald-200 transition-colors">Audio</button>
+                      <button class="flex-1 bg-blue-100 text-blue-700 py-2 px-3 rounded-lg text-xs font-semibold hover:bg-blue-200 transition-colors">Notes</button>
+                    </div>
+                  </div>
+                  <div class="bg-white p-4 rounded-xl hover:shadow-md transition-shadow cursor-pointer">
+                    <div class="flex items-center justify-between mb-2">
+                      <h5 class="font-semibold text-gray-800">Al-Qalam</h5>
+                      <i data-lucide="arrow-right" class="w-4 h-4 text-emerald-600"></i>
+                    </div>
+                    <p class="text-xs text-gray-500 mb-3">Stage 5 Nabawi - Makki</p>
+                    <div class="flex gap-2">
+                      <button class="flex-1 bg-emerald-100 text-emerald-700 py-2 px-3 rounded-lg text-xs font-semibold hover:bg-emerald-200 transition-colors">Audio</button>
+                      <button class="flex-1 bg-blue-100 text-blue-700 py-2 px-3 rounded-lg text-xs font-semibold hover:bg-blue-200 transition-colors">Notes</button>
+                    </div>
+                  </div>
+                  <div class="bg-white p-4 rounded-xl hover:shadow-md transition-shadow cursor-pointer">
+                    <div class="flex items-center justify-between mb-2">
+                      <h5 class="font-semibold text-gray-800">Al-Haqqah</h5>
+                      <i data-lucide="arrow-right" class="w-4 h-4 text-emerald-600"></i>
+                    </div>
+                    <p class="text-xs text-gray-500 mb-3">Stage 5 Nabawi - Makki</p>
+                    <div class="flex gap-2">
+                      <button class="flex-1 bg-emerald-100 text-emerald-700 py-2 px-3 rounded-lg text-xs font-semibold hover:bg-emerald-200 transition-colors">Audio</button>
+                      <button class="flex-1 bg-blue-100 text-blue-700 py-2 px-3 rounded-lg text-xs font-semibold hover:bg-blue-200 transition-colors">Notes</button>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+            <section id="surah-details" class="min-h-screen flex items-center px-6 py-20 bg-gradient-to-br from-amber-50 via-emerald-50 to-white">
+        <div class="max-w-6xl mx-auto w-full">
+          <div class="text-center mb-14">
+            <div class="inline-block px-6 py-2 bg-amber-100 text-amber-800 rounded-full text-sm font-semibold mb-4">
+              Surah Module (Deep Learning Screen)
+            </div>
+            <h2 class="text-5xl font-bold text-gray-900 mb-4">Surah Details &mdash; Structured Understanding</h2>
+            <p class="text-gray-600 text-lg">Every Surah is unpacked with the context, structure, and tools required for meaningful application.</p>
+          </div>
+          
+          <div class="bg-white rounded-3xl shadow-2xl border-4 border-emerald-200 p-8 space-y-8">
+            <div class="grid gap-6 md:grid-cols-2">
+            <div class="bg-white border border-emerald-100 rounded-2xl p-6 shadow-lg">
+              <div class="flex items-center gap-3 mb-4">
+                <div class="w-12 h-12 rounded-xl bg-emerald-600 text-white flex items-center justify-center shadow-md">
+                  <i data-lucide="book-open" class="w-6 h-6"></i>
+                </div>
+                <div>
+                  <p class="text-xs uppercase tracking-widest text-emerald-600 font-semibold">Basic Information</p>
+                  <h3 class="text-2xl font-semibold text-gray-900">Name, Origin & Theme</h3>
+                </div>
+              </div>
+              <ul class="space-y-3 text-gray-700">
+                <li class="flex gap-2">
+                  <i data-lucide="type" class="w-4 h-4 text-emerald-600 mt-1"></i>
+                  <span>Arabic + English names with phonetic support.</span>
+                </li>
+                <li class="flex gap-2">
+                  <i data-lucide="globe" class="w-4 h-4 text-emerald-600 mt-1"></i>
+                  <span>Makki/Madani tag, number of verses, and summary theme.</span>
+                </li>
+              </ul>
+            </div>
+            
+            <div class="bg-white border border-amber-100 rounded-2xl p-6 shadow-lg">
+              <div class="flex items-center gap-3 mb-4">
+                <div class="w-12 h-12 rounded-xl bg-amber-500 text-white flex items-center justify-center shadow-md">
+                  <i data-lucide="scroll" class="w-6 h-6"></i>
+                </div>
+                <div>
+                  <p class="text-xs uppercase tracking-widest text-amber-600 font-semibold">Shaan-e-Nuzool</p>
+                  <h3 class="text-2xl font-semibold text-gray-900">Revelation Background</h3>
+                </div>
+              </div>
+              <ul class="space-y-3 text-gray-700">
+                <li class="flex gap-2">
+                  <i data-lucide="map" class="w-4 h-4 text-amber-600 mt-1"></i>
+                  <span>Text + visuals for the revelation context.</span>
+                </li>
+                <li class="flex gap-2">
+                  <i data-lucide="flag" class="w-4 h-4 text-amber-600 mt-1"></i>
+                  <span>Linked Seerah incidents that anchor the lesson.</span>
+                </li>
+              </ul>
+            </div>
+            </div>
+          
+            <div class="bg-white rounded-3xl border border-gray-200 shadow-xl p-8">
+            <div class="flex items-center gap-4 mb-6">
+              <div class="w-14 h-14 rounded-2xl bg-purple-600 text-white flex items-center justify-center shadow-lg">
+                <i data-lucide="layers" class="w-7 h-7"></i>
+              </div>
+              <div>
+                <p class="text-xs uppercase tracking-[0.3em] text-purple-200 bg-purple-600/20 px-3 py-1 rounded-full inline-block">Surah Structure</p>
+                <h3 class="text-3xl font-semibold text-gray-900 mt-2">Tamheed &bull; Mauzu &bull; Khatima</h3>
+              </div>
+            </div>
+            <div class="grid gap-4 md:grid-cols-3">
+              <div class="bg-purple-50 border border-purple-100 rounded-2xl p-5">
+                <p class="text-xs uppercase text-purple-600 font-semibold mb-2">Tamheed</p>
+                <p class="text-sm text-gray-600 mb-2">Ayah range clearly marked with summary cues.</p>
+                <p class="text-gray-800 font-semibold text-sm">Sets the heart-state for the Surah.</p>
+              </div>
+              <div class="bg-emerald-50 border border-emerald-100 rounded-2xl p-5">
+                <p class="text-xs uppercase text-emerald-600 font-semibold mb-2">Mauzu</p>
+                <p class="text-sm text-gray-600 mb-2">Breaks the body of the Surah into digestible clusters.</p>
+                <p class="text-gray-800 font-semibold text-sm">Highlights core arguments and proofs.</p>
+              </div>
+              <div class="bg-amber-50 border border-amber-100 rounded-2xl p-5">
+                <p class="text-xs uppercase text-amber-600 font-semibold mb-2">Khatima</p>
+                <p class="text-sm text-gray-600 mb-2">Final ayah range with closing reflections.</p>
+                <p class="text-gray-800 font-semibold text-sm">Calls to action + du'a themes.</p>
+              </div>
+            </div>
+            </div>
+          
+            <div class="grid gap-6 md:grid-cols-3">
+            <div class="md:col-span-2 bg-white border border-emerald-100 rounded-3xl p-6 shadow-lg">
+              <div class="flex items-center gap-3 mb-4">
+                <div class="w-12 h-12 rounded-full bg-emerald-600 text-white flex items-center justify-center shadow-md">
+                  <i data-lucide="sparkles" class="w-6 h-6"></i>
+                </div>
+                <h4 class="text-2xl font-semibold text-gray-900">Key Lessons &amp; Takeaways</h4>
+              </div>
+              <p class="text-gray-600 mb-4">Actionable guidance and reflective prompts accompany every Surah, ensuring students move beyond memorization.</p>
+              <ul class="space-y-3 text-gray-700">
+                <li class="flex gap-2">
+                  <i data-lucide="check-circle" class="w-4 h-4 text-emerald-600 mt-1"></i>
+                  <span>Bullet lists for practical implementation.</span>
+                </li>
+                <li class="flex gap-2">
+                  <i data-lucide="target" class="w-4 h-4 text-emerald-600 mt-1"></i>
+                  <span>Insights tagged for students, teachers, and coordinators.</span>
+                </li>
+              </ul>
+            </div>
+            <div class="space-y-6">
+              <div class="bg-gradient-to-br from-blue-500 to-blue-700 rounded-2xl p-5 text-white shadow-lg">
+                <div class="flex items-center gap-3 mb-4">
+                  <div class="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
+                    <i data-lucide="headphones" class="w-5 h-5"></i>
+                  </div>
+                  <div>
+                    <p class="text-xs uppercase tracking-widest text-blue-100">Class Audio</p>
+                    <h4 class="text-xl font-semibold">Stream-Only Playback</h4>
+                  </div>
+                </div>
+                <p class="text-sm text-blue-100 mb-3">Students track listening progress with auto-save checkpoints.</p>
+                <div class="bg-white/20 rounded-full h-2">
+                  <div class="bg-white h-2 rounded-full" style="width: 68%;"></div>
+                </div>
+              </div>
+              <div class="bg-white border border-purple-100 rounded-2xl p-5 shadow-lg">
+                <div class="flex items-center gap-3 mb-3">
+                  <div class="w-10 h-10 rounded-full bg-purple-600 text-white flex items-center justify-center">
+                    <i data-lucide="pen-tool" class="w-5 h-5"></i>
+                  </div>
+                  <div>
+                    <p class="text-xs uppercase tracking-widest text-purple-600">Notes &amp; Reflections</p>
+                    <h4 class="text-xl font-semibold text-gray-900">Write Inside the App</h4>
+                  </div>
+                </div>
+                <p class="text-gray-600 text-sm">Rich text editor with bookmarking, emojis, and export to PDF for revision binders.</p>
+              </div>
+            </div>
+          </div>
+          
+            <div class="bg-gradient-to-r from-emerald-600 to-teal-600 text-white rounded-3xl p-8 shadow-2xl border-l-4 border-amber-400">
+            <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+              <div class="flex items-center gap-4">
+                <div class="w-14 h-14 rounded-full bg-white/20 flex items-center justify-center">
+                  <i data-lucide="heart" class="w-7 h-7 text-white"></i>
+                </div>
+                <div>
+                  <p class="uppercase text-sm tracking-widest text-amber-200">Stakeholder Reasoning</p>
+                  <h4 class="text-2xl font-semibold text-white">Why this screen matters</h4>
+                </div>
+              </div>
+              <p class="text-lg text-emerald-50 md:flex-1">Students gain structured, meaningful understanding instead of surface-level notes, reinforcing long-term retention and real-world application.</p>
+            </div>
+          </div>
+          </div>
+        </div>
+      </section>
+
+      
+      <section id="coordinator-dashboard-example" class="min-h-screen flex items-center px-6 py-20 bg-white">
+        <div class="max-w-7xl mx-auto w-full">
+          <div class="text-center mb-12">
+            <div class="inline-block px-6 py-2 bg-purple-600 text-white rounded-full text-sm font-semibold mb-4">
+              Coordinator View
+            </div>
+            <h2 class="text-5xl font-bold text-gray-800 mb-4">Coordinator (Naqeeb) Dashboard</h2>
+            <div class="w-24 h-1 bg-gradient-to-r from-emerald-600 via-amber-500 to-teal-600 mx-auto mb-4" ></div>
+            <p class="text-gray-600">Supporting students effectively with data-driven insights</p>
+          </div>
+          
+          
+          <div class="bg-white rounded-3xl shadow-2xl overflow-hidden border-4 border-purple-600">
+            
+            <div class="bg-gradient-to-r from-purple-600 to-indigo-700 p-6 text-white">
+              <div class="flex justify-between items-center">
+                <div>
+                  <h3 class="text-2xl font-bold">Mohammed Mubashir - Coordinator (Naqeeb) </h3>
+                  <p class="text-purple-100">UAE-B01 • 24 Students</p>
+                </div>
+                <div class="flex gap-3">
+                  <div class="bg-white/20 backdrop-blur px-4 py-2 rounded-lg text-center">
+                    <p class="text-xs text-purple-100">Avg Attendance</p>
+                    <p class="text-xl font-bold">88%</p>
+                  </div>
+                  <div class="bg-white/20 backdrop-blur px-4 py-2 rounded-lg text-center">
+                    <p class="text-xs text-purple-100">Task Completion</p>
+                    <p class="text-xl font-bold">76%</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="p-6">
+              <div class="flex flex-col lg:flex-row gap-6">
+                <aside class="w-full lg:w-64 bg-purple-50 border border-purple-100 rounded-2xl p-5 shadow-sm">
+                  <div class="flex items-center justify-between mb-4">
+                    <h4 class="text-lg font-semibold text-purple-900">Coordinator Menu</h4>
+                    <i data-lucide="menu" class="w-5 h-5 text-purple-500 lg:hidden"></i>
+                  </div>
+                  <nav class="space-y-2 text-purple-900">
+                    <button class="w-full flex items-center justify-between px-4 py-3 rounded-xl text-sm font-semibold bg-white shadow border border-purple-100">
+                      <span class="flex items-center gap-3">
+                        <i data-lucide="layout-dashboard" class="w-4 h-4 text-purple-500"></i>
+                        Batch Overview
+                      </span>
+                      <i data-lucide="chevron-right" class="w-4 h-4 text-purple-400"></i>
+                    </button>
+                    <button class="w-full flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-semibold text-purple-800 bg-purple-100/70 border border-purple-200">
+                      <i data-lucide="alert-triangle" class="w-4 h-4 text-purple-500"></i>
+                      Risk Alerts
+                      <span class="ml-auto text-xs text-purple-700 bg-white px-2 py-0.5 rounded-full">3</span>
+                    </button>
+                    <button class="w-full flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-semibold text-purple-800 hover:bg-white border border-transparent hover:border-purple-100 transition">
+                      <i data-lucide="message-circle" class="w-4 h-4 text-purple-500"></i>
+                      Student Follow-ups
+                    </button>
+                    <button class="w-full flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-semibold text-purple-800 hover:bg-white border border-transparent hover:border-purple-100 transition">
+                      <i data-lucide="folder" class="w-4 h-4 text-purple-500"></i>
+                      Resources
+                    </button>
+                    <button class="w-full flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-semibold text-purple-800 hover:bg-white border border-transparent hover:border-purple-100 transition">
+                      <i data-lucide="bar-chart-3" class="w-4 h-4 text-purple-500"></i>
+                      Reports
+                    </button>
+                  </nav>
+                </aside>
+                <div class="flex-1 space-y-6">
+              
+              <div class="grid md:grid-cols-3 gap-4 mb-6">
+                <div class="bg-red-50 border-2 border-red-200 p-4 rounded-xl">
+                  <div class="flex items-center gap-2 mb-2">
+                    <i data-lucide="alert-triangle" class="w-5 h-5 text-red-600" ></i>
+                    <h5 class="font-semibold text-red-800">High Risk</h5>
+                  </div>
+                  <p class="text-3xl font-bold text-red-600 mb-1">3</p>
+                  <p class="text-sm text-gray-600">Students need immediate attention</p>
+                </div>
+                
+                <div class="bg-amber-50 border-2 border-amber-200 p-4 rounded-xl">
+                  <div class="flex items-center gap-2 mb-2">
+                    <i data-lucide="clock" class="w-5 h-5 text-amber-600" ></i>
+                    <h5 class="font-semibold text-amber-800">Moderate Risk</h5>
+                  </div>
+                  <p class="text-3xl font-bold text-amber-600 mb-1">5</p>
+                  <p class="text-sm text-gray-600">Students showing warning signs</p>
+                </div>
+                
+                <div class="bg-green-50 border-2 border-green-200 p-4 rounded-xl">
+                  <div class="flex items-center gap-2 mb-2">
+                    <i data-lucide="check-circle" class="w-5 h-5 text-green-600" ></i>
+                    <h5 class="font-semibold text-green-800">Engaged</h5>
+                  </div>
+                  <p class="text-3xl font-bold text-green-600 mb-1">16</p>
+                  <p class="text-sm text-gray-600">Students on track</p>
+                </div>
+              </div>
+              
+              
+              <div class="bg-gray-50 rounded-2xl p-6">
+                <h4 class="text-xl font-semibold text-gray-800 mb-4">Student Overview</h4>
+                <div class="space-y-3">
+                  
+                  <div class="bg-white p-4 rounded-xl border-l-4 border-red-500 shadow-sm">
+                    <div class="flex items-center justify-between">
+                      <div class="flex items-center gap-4 flex-1">
+                        <div class="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center">
+                          <span class="text-lg font-bold text-red-600">FA</span>
+                        </div>
+                        <div class="flex-1">
+                          <div class="flex items-center gap-2">
+                            <h5 class="font-semibold text-gray-800">Osman Khan</h5>
+                            <span class="bg-red-100 text-red-700 text-xs px-2 py-1 rounded-full font-semibold">High Risk</span>
+                          </div>
+                          <p class="text-sm text-gray-500">Last attendance: 2 weeks ago</p>
+                        </div>
+                      </div>
+                      <div class="flex gap-6 text-center">
+                        <div>
+                          <p class="text-xs text-gray-500">Attendance</p>
+                          <p class="text-lg font-bold text-red-600">45%</p>
+                        </div>
+                        <div>
+                          <p class="text-xs text-gray-500">Tasks</p>
+                          <p class="text-lg font-bold text-red-600">30%</p>
+                        </div>
+                        <div>
+                          <p class="text-xs text-gray-500">Quiz Avg</p>
+                          <p class="text-lg font-bold text-red-600">52%</p>
+                        </div>
+                        <button class="bg-red-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-red-700 transition-colors">
+                          Follow Up
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  
+                  <div class="bg-white p-4 rounded-xl border-l-4 border-amber-500 shadow-sm">
+                    <div class="flex items-center justify-between">
+                      <div class="flex items-center gap-4 flex-1">
+                        <div class="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center">
+                          <span class="text-lg font-bold text-amber-600">MH</span>
+                        </div>
+                        <div class="flex-1">
+                          <div class="flex items-center gap-2">
+                            <h5 class="font-semibold text-gray-800">Mohammed Hassan</h5>
+                            <span class="bg-amber-100 text-amber-700 text-xs px-2 py-1 rounded-full font-semibold">Moderate Risk</span>
+                          </div>
+                          <p class="text-sm text-gray-500">Missed last 2 tasks</p>
+                        </div>
+                      </div>
+                      <div class="flex gap-6 text-center">
+                        <div>
+                          <p class="text-xs text-gray-500">Attendance</p>
+                          <p class="text-lg font-bold text-amber-600">78%</p>
+                        </div>
+                        <div>
+                          <p class="text-xs text-gray-500">Tasks</p>
+                          <p class="text-lg font-bold text-amber-600">65%</p>
+                        </div>
+                        <div>
+                          <p class="text-xs text-gray-500">Quiz Avg</p>
+                          <p class="text-lg font-bold text-amber-600">74%</p>
+                        </div>
+                        <button class="bg-amber-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-amber-700 transition-colors">
+                          Send Reminder
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  
+                  <div class="bg-white p-4 rounded-xl border-l-4 border-green-500 shadow-sm">
+                    <div class="flex items-center justify-between">
+                      <div class="flex items-center gap-4 flex-1">
+                        <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
+                          <span class="text-lg font-bold text-green-600">AA</span>
+                        </div>
+                        <div class="flex-1">
+                          <div class="flex items-center gap-2">
+                            <h5 class="font-semibold text-gray-800">Ahmed Abdullah</h5>
+                            <span class="bg-green-100 text-green-700 text-xs px-2 py-1 rounded-full font-semibold">Engaged</span>
+                          </div>
+                          <p class="text-sm text-gray-500">Excellent progress, all tasks completed</p>
+                        </div>
+                      </div>
+                      <div class="flex gap-6 text-center">
+                        <div>
+                          <p class="text-xs text-gray-500">Attendance</p>
+                          <p class="text-lg font-bold text-green-600">95%</p>
+                        </div>
+                        <div>
+                          <p class="text-xs text-gray-500">Tasks</p>
+                          <p class="text-lg font-bold text-green-600">100%</p>
+                        </div>
+                        <div>
+                          <p class="text-xs text-gray-500">Quiz Avg</p>
+                          <p class="text-lg font-bold text-green-600">92%</p>
+                        </div>
+                        <button class="bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-green-700 transition-colors">
+                          View Details
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      
+      <section id="teacher-dashboard-example" class="min-h-screen flex items-center px-6 py-20 bg-gradient-to-br from-blue-50 to-indigo-50">
+        <div class="max-w-7xl mx-auto w-full">
+          <div class="text-center mb-12">
+            <div class="inline-block px-6 py-2 bg-blue-600 text-white rounded-full text-sm font-semibold mb-4">
+              Teacher (Ustaad) View
+            </div>
+            <h2 class="text-5xl font-bold text-gray-800 mb-4">Teacher (Ustaad) Dashboard</h2>
+            <div class="w-24 h-1 bg-gradient-to-r from-emerald-600 via-amber-500 to-teal-600 mx-auto mb-4" ></div>
+            <p class="text-gray-600">Data-driven teaching for better outcomes</p>
+          </div>
+          
+          
+          <div class="bg-white rounded-3xl shadow-2xl overflow-hidden border-4 border-blue-600">
+            
+            <div class="bg-gradient-to-r from-blue-600 to-indigo-700 p-6 text-white">
+              <div class="flex justify-between items-center">
+                <div>
+                  <h3 class="text-2xl font-bold">Ustad Mohammed Mujtaba</h3>
+                  <p class="text-blue-100">Teaching 3 Batches • 300 Total Students</p>
+                </div>
+                <div class="flex gap-3">
+                  <div class="bg-white/20 backdrop-blur px-4 py-2 rounded-lg text-center">
+                    <p class="text-xs text-blue-100">This Week</p>
+                    <p class="text-xl font-bold">6 Classes</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="p-6">
+              <div class="flex flex-col lg:flex-row gap-6">
+                <aside class="w-full lg:w-64 bg-blue-50 border border-blue-100 rounded-2xl p-5 shadow-sm">
+                  <div class="flex items-center justify-between mb-4">
+                    <h4 class="text-lg font-semibold text-blue-900">Teacher Shortcuts</h4>
+                    <i data-lucide="menu" class="w-5 h-5 text-blue-500 lg:hidden"></i>
+                  </div>
+                  <nav class="space-y-2 text-blue-900">
+                    <button class="w-full flex items-center justify-between px-4 py-3 rounded-xl text-sm font-semibold bg-white shadow border border-blue-100">
+                      <span class="flex items-center gap-3">
+                        <i data-lucide="calendar" class="w-4 h-4 text-blue-500"></i>
+                        Class Prep
+                      </span>
+                      <i data-lucide="chevron-right" class="w-4 h-4 text-blue-400"></i>
+                    </button>
+                    <button class="w-full flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-semibold text-blue-800 bg-blue-100/70 border border-blue-200">
+                      <i data-lucide="users" class="w-4 h-4 text-blue-500"></i>
+                      Attendance
+                    </button>
+                    <button class="w-full flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-semibold text-blue-800 hover:bg-white border border-transparent hover:border-blue-100 transition">
+                      <i data-lucide="clipboard-check" class="w-4 h-4 text-blue-500"></i>
+                      Assignments
+                    </button>
+                    <button class="w-full flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-semibold text-blue-800 hover:bg-white border border-transparent hover:border-blue-100 transition">
+                      <i data-lucide="message-square" class="w-4 h-4 text-blue-500"></i>
+                      Feedback
+                    </button>
+                    <button class="w-full flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-semibold text-blue-800 hover:bg-white border border-transparent hover:border-blue-100 transition">
+                      <i data-lucide="folder" class="w-4 h-4 text-blue-500"></i>
+                      Resources
+                    </button>
+                  </nav>
+                </aside>
+                <div class="flex-1 space-y-6">
+              <div class="bg-gradient-to-br from-emerald-500 to-emerald-700 p-6 rounded-2xl text-white mb-6 shadow-xl">
+                <div class="flex items-center justify-between mb-4">
+                  <h4 class="text-xl font-semibold">Next Class Preparation</h4>
+                  <span class="bg-white/20 px-3 py-1 rounded-full text-sm">In 2 hours</span>
+                </div>
+                <div class="grid md:grid-cols-3 gap-4 mb-4">
+                  <div>
+                    <h3 class="text-2xl font-bold mb-1">Surah Al-Mulk</h3>
+                    <p class="text-emerald-100">UAE-B01 • 24 Students</p>
+                  </div>
+                  <div class="bg-white/20 backdrop-blur rounded-xl p-3">
+                    <p class="text-xs mb-1">Pre-Class Prep</p>
+                    <p class="text-sm font-semibold">18 students completed revision</p>
+                    <div class="w-full bg-white/30 rounded-full h-1.5 mt-2">
+                      <div class="bg-white h-1.5 rounded-full" style="width: 75%;" ></div>
+                    </div>
+                  </div>
+                  <div class="bg-white/20 backdrop-blur rounded-xl p-3">
+                    <p class="text-xs mb-1">Last Week's Quiz</p>
+                    <p class="text-sm font-semibold">Average Score: 84%</p>
+                    <p class="text-xs mt-1">Common mistakes: Q3, Q7</p>
+                  </div>
+                </div>
+                <button class="bg-amber-500 hover:bg-amber-600 text-white font-semibold py-3 px-6 rounded-xl transition-all">
+                  View Teaching Notes & Tafseer
+                </button>
+              </div>
+              
+              
+              <div class="grid md:grid-cols-3 gap-6 mb-6">
+                <div class="bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-2xl border-2 border-blue-200">
+                  <h5 class="font-semibold text-gray-800 mb-4">UAE-B01</h5>
+                  <div class="space-y-3">
+                    <div>
+                      <div class="flex justify-between text-sm mb-1">
+                        <span class="text-gray-600">Avg Attendance</span>
+                        <span class="font-bold text-blue-600">88%</span>
+                      </div>
+                      <div class="w-full bg-blue-200 rounded-full h-2">
+                        <div class="bg-blue-600 h-2 rounded-full" style="width: 88%;" ></div>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="flex justify-between text-sm mb-1">
+                        <span class="text-gray-600">Task Completion</span>
+                        <span class="font-bold text-green-600">76%</span>
+                      </div>
+                      <div class="w-full bg-green-200 rounded-full h-2">
+                        <div class="bg-green-600 h-2 rounded-full" style="width: 76%;" ></div>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="flex justify-between text-sm mb-1">
+                        <span class="text-gray-600">Quiz Average</span>
+                        <span class="font-bold text-purple-600">82%</span>
+                      </div>
+                      <div class="w-full bg-purple-200 rounded-full h-2">
+                        <div class="bg-purple-600 h-2 rounded-full" style="width: 82%;" ></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="bg-gradient-to-br from-purple-50 to-purple-100 p-6 rounded-2xl border-2 border-purple-200">
+                  <h5 class="font-semibold text-gray-800 mb-4">UAE-B02</h5>
+                  <div class="space-y-3">
+                    <div>
+                      <div class="flex justify-between text-sm mb-1">
+                        <span class="text-gray-600">Avg Attendance</span>
+                        <span class="font-bold text-blue-600">92%</span>
+                      </div>
+                      <div class="w-full bg-blue-200 rounded-full h-2">
+                        <div class="bg-blue-600 h-2 rounded-full" style="width: 92%;" ></div>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="flex justify-between text-sm mb-1">
+                        <span class="text-gray-600">Task Completion</span>
+                        <span class="font-bold text-green-600">85%</span>
+                      </div>
+                      <div class="w-full bg-green-200 rounded-full h-2">
+                        <div class="bg-green-600 h-2 rounded-full" style="width: 85%;" ></div>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="flex justify-between text-sm mb-1">
+                        <span class="text-gray-600">Quiz Average</span>
+                        <span class="font-bold text-purple-600">87%</span>
+                      </div>
+                      <div class="w-full bg-purple-200 rounded-full h-2">
+                        <div class="bg-purple-600 h-2 rounded-full" style="width: 87%;" ></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="bg-gradient-to-br from-teal-50 to-teal-100 p-6 rounded-2xl border-2 border-teal-200">
+                  <h5 class="font-semibold text-gray-800 mb-4">UAE-B03</h5>
+                  <div class="space-y-3">
+                    <div>
+                      <div class="flex justify-between text-sm mb-1">
+                        <span class="text-gray-600">Avg Attendance</span>
+                        <span class="font-bold text-blue-600">79%</span>
+                      </div>
+                      <div class="w-full bg-blue-200 rounded-full h-2">
+                        <div class="bg-blue-600 h-2 rounded-full" style="width: 79%;" ></div>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="flex justify-between text-sm mb-1">
+                        <span class="text-gray-600">Task Completion</span>
+                        <span class="font-bold text-green-600">71%</span>
+                      </div>
+                      <div class="w-full bg-green-200 rounded-full h-2">
+                        <div class="bg-green-600 h-2 rounded-full" style="width: 71%;" ></div>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="flex justify-between text-sm mb-1">
+                        <span class="text-gray-600">Quiz Average</span>
+                        <span class="font-bold text-purple-600">78%</span>
+                      </div>
+                      <div class="w-full bg-purple-200 rounded-full h-2">
+                        <div class="bg-purple-600 h-2 rounded-full" style="width: 78%;" ></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              
+              <div class="bg-gray-50 p-6 rounded-2xl">
+                <h4 class="text-xl font-semibold text-gray-800 mb-4">Teaching Insights</h4>
+                <div class="grid md:grid-cols-2 gap-4">
+                  <div class="bg-white p-4 rounded-xl border-l-4 border-amber-500">
+                    <div class="flex items-center gap-2 mb-2">
+                      <i data-lucide="alert-triangle" class="w-5 h-5 text-amber-600" ></i>
+                      <h5 class="font-semibold text-gray-800">Areas Needing Focus</h5>
+                    </div>
+                    <ul class="space-y-2 text-sm text-gray-700">
+                      <li>• Surah Al-Qalam: Students struggled with verses 17-33</li>
+                      <li>• Quiz Q7: Only 45% answered correctly</li>
+                      <li>• Need more emphasis on Makki vs Madani characteristics</li>
+                    </ul>
+                  </div>
+                  
+                  <div class="bg-white p-4 rounded-xl border-l-4 border-green-500">
+                    <div class="flex items-center gap-2 mb-2">
+                      <i data-lucide="check-circle" class="w-5 h-5 text-green-600" ></i>
+                      <h5 class="font-semibold text-gray-800">Strong Areas</h5>
+                    </div>
+                    <ul class="space-y-2 text-sm text-gray-700">
+                      <li>• Surah structure understanding: 89% average</li>
+                      <li>• Context and background: Well grasped by most</li>
+                      <li>• Note-taking habits improving consistently</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      
+      <section id="admin-dashboard-example" class="min-h-screen flex items-center px-6 py-20 bg-white">
+        <div class="max-w-7xl mx-auto w-full">
+          <div class="text-center mb-12">
+            <div class="inline-block px-6 py-2 bg-indigo-600 text-white rounded-full text-sm font-semibold mb-4">
+              Admin View
+            </div>
+            <h2 class="text-5xl font-bold text-gray-800 mb-4">Admin Dashboard</h2>
+            <div class="w-24 h-1 bg-gradient-to-r from-emerald-600 via-amber-500 to-teal-600 mx-auto mb-4" ></div>
+            <p class="text-gray-600">Centralized operations and efficient management</p>
+          </div>
+          
+          
+          <div class="bg-white rounded-3xl shadow-2xl overflow-hidden border-4 border-indigo-600">
+            
+            <div class="bg-gradient-to-r from-indigo-600 to-purple-700 p-6 text-white">
+              <div class="flex justify-between items-center">
+                <div>
+                  <h3 class="text-2xl font-bold">Mohammed Rizwan</h3>
+                  <p class="text-indigo-100">Administrator</p>
+                </div>
+                <div class="flex gap-3">
+                  <div class="bg-white/20 backdrop-blur px-4 py-2 rounded-lg text-center">
+                    <p class="text-xs text-indigo-100">Active Batches</p>
+                    <p class="text-xl font-bold">12</p>
+                  </div>
+                  <div class="bg-white/20 backdrop-blur px-4 py-2 rounded-lg text-center">
+                    <p class="text-xs text-indigo-100">Total Students</p>
+                    <p class="text-xl font-bold">287</p>
+                  </div>
+                  <div class="bg-white/20 backdrop-blur px-4 py-2 rounded-lg text-center">
+                    <p class="text-xs text-indigo-100">Pending Apps</p>
+                    <p class="text-xl font-bold">15</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="p-6">
+              <div class="flex flex-col lg:flex-row gap-6">
+                <aside class="w-full lg:w-64 bg-indigo-50 border border-indigo-100 rounded-2xl p-5 shadow-sm">
+                  <div class="flex items-center justify-between mb-4">
+                    <h4 class="text-lg font-semibold text-indigo-900">Admin Controls</h4>
+                    <i data-lucide="menu" class="w-5 h-5 text-indigo-500 lg:hidden"></i>
+                  </div>
+                  <nav class="space-y-2 text-indigo-900">
+                    <button class="w-full flex items-center justify-between px-4 py-3 rounded-xl text-sm font-semibold bg-white shadow border border-indigo-100">
+                      <span class="flex items-center gap-3">
+                        <i data-lucide="layout-dashboard" class="w-4 h-4 text-indigo-500"></i>
+                        Operations
+                      </span>
+                      <i data-lucide="chevron-right" class="w-4 h-4 text-indigo-400"></i>
+                    </button>
+                    <button class="w-full flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-semibold text-indigo-800 bg-indigo-100/70 border border-indigo-200">
+                      <i data-lucide="user-plus" class="w-4 h-4 text-indigo-500"></i>
+                      Enrollment
+                    </button>
+                    <button class="w-full flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-semibold text-indigo-800 hover:bg-white border border-transparent hover:border-indigo-100 transition">
+                      <i data-lucide="shield" class="w-4 h-4 text-indigo-500"></i>
+                      Compliance
+                    </button>
+                    <button class="w-full flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-semibold text-indigo-800 hover:bg-white border border-transparent hover:border-indigo-100 transition">
+                      <i data-lucide="file-text" class="w-4 h-4 text-indigo-500"></i>
+                      Reports
+                    </button>
+                    <button class="w-full flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-semibold text-indigo-800 hover:bg-white border border-transparent hover:border-indigo-100 transition">
+                      <i data-lucide="settings" class="w-4 h-4 text-indigo-500"></i>
+                      Settings
+                    </button>
+                  </nav>
+                </aside>
+                <div class="flex-1 space-y-6">
+              
+              <div class="grid md:grid-cols-4 gap-4 mb-6">
+                <button class="bg-gradient-to-br from-emerald-500 to-emerald-600 text-white p-4 rounded-xl hover:shadow-lg transition-all">
+                  <i data-lucide="users" class="w-8 h-8 mb-2" ></i>
+                  <p class="font-semibold">Review Applications</p>
+                  <p class="text-sm text-emerald-100">15 pending</p>
+                </button>
+                
+                <button class="bg-gradient-to-br from-blue-500 to-blue-600 text-white p-4 rounded-xl hover:shadow-lg transition-all">
+                  <i data-lucide="calendar" class="w-8 h-8 mb-2" ></i>
+                  <p class="font-semibold">Manage Batches</p>
+                  <p class="text-sm text-blue-100">12 active</p>
+                </button>
+                
+                <button class="bg-gradient-to-br from-purple-500 to-purple-600 text-white p-4 rounded-xl hover:shadow-lg transition-all">
+                  <i data-lucide="download" class="w-8 h-8 mb-2" ></i>
+                  <p class="font-semibold">Upload Recordings</p>
+                  <p class="text-sm text-purple-100">5 pending</p>
+                </button>
+                
+                <button class="bg-gradient-to-br from-amber-500 to-amber-600 text-white p-4 rounded-xl hover:shadow-lg transition-all">
+                  <i data-lucide="file-text" class="w-8 h-8 mb-2" ></i>
+                  <p class="font-semibold">Generate Reports</p>
+                  <p class="text-sm text-amber-100">Export data</p>
+                </button>
+              </div>
+              
+              
+              <div class="bg-gradient-to-r from-emerald-50 to-teal-50 p-6 rounded-2xl mb-6 border-2 border-emerald-200">
+                <h4 class="text-xl font-semibold text-gray-800 mb-4">Pending Applications</h4>
+                <div class="space-y-3">
+                  <div class="bg-white p-4 rounded-xl flex items-center justify-between shadow-sm">
+                    <div class="flex items-center gap-4">
+                      <div class="w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center">
+                        <span class="text-lg font-bold text-emerald-600">MS</span>
+                      </div>
+                      <div>
+                        <h5 class="font-semibold text-gray-800">Mohammed Samiullah</h5>
+                        <p class="text-sm text-gray-500">Applied 2 days ago • UAE</p>
+                      </div>
+                    </div>
+                    <div class="flex gap-2">
+                      <button class="bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-green-700 transition-colors">
+                        Accept
+                      </button>
+                      <button class="bg-amber-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-amber-700 transition-colors">
+                        Waitlist
+                      </button>
+                      <button class="bg-red-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-red-700 transition-colors">
+                        Reject
+                      </button>
+                    </div>
+                  </div>
+                  
+                  <div class="bg-white p-4 rounded-xl flex items-center justify-between shadow-sm">
+                    <div class="flex items-center gap-4">
+                      <div class="w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center">
+                        <span class="text-lg font-bold text-emerald-600">KA</span>
+                      </div>
+                      <div>
+                        <h5 class="font-semibold text-gray-800">Khalid Ali</h5>
+                        <p class="text-sm text-gray-500">Applied 1 day ago • UK </p>
+                      </div>
+                    </div>
+                    <div class="flex gap-2">
+                      <button class="bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-green-700 transition-colors">
+                        Accept
+                      </button>
+                      <button class="bg-amber-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-amber-700 transition-colors">
+                        Waitlist
+                      </button>
+                      <button class="bg-red-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-red-700 transition-colors">
+                        Reject
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              
+              <div class="bg-gray-50 p-6 rounded-2xl">
+                <div class="flex items-center justify-between mb-4">
+                  <h4 class="text-xl font-semibold text-gray-800">Active Batches</h4>
+                  <button class="bg-indigo-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-indigo-700 transition-colors flex items-center gap-2">
+                    <i data-lucide="users" class="w-4 h-4" ></i>
+                    Create New Batch
+                  </button>
+                </div>
+                
+                <div class="overflow-x-auto">
+                  <table class="w-full">
+                    <thead>
+                      <tr class="border-b-2 border-gray-200">
+                        <th class="text-left py-3 px-4 text-gray-600 font-semibold">Batch ID</th>
+                        <th class="text-left py-3 px-4 text-gray-600 font-semibold">Region</th>
+                        <th class="text-left py-3 px-4 text-gray-600 font-semibold">Teacher</th>
+                        <th class="text-left py-3 px-4 text-gray-600 font-semibold">Coordinator</th>
+                        <th class="text-left py-3 px-4 text-gray-600 font-semibold">Students</th>
+                        <th class="text-left py-3 px-4 text-gray-600 font-semibold">Stage</th>
+                        <th class="text-left py-3 px-4 text-gray-600 font-semibold">Actions</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr class="border-b border-gray-100 hover:bg-white transition-colors">
+                        <td class="py-3 px-4 font-semibold text-gray-800">UAE-B01</td>
+                        <td class="py-3 px-4 text-gray-600">UAE</td>
+                        <td class="py-3 px-4 text-gray-600">Ustad Mujtaba</td>
+                        <td class="py-3 px-4 text-gray-600">Br. Mubashir</td>
+                        <td class="py-3 px-4">
+                          <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm font-semibold">24/25</span>
+                        </td>
+                        <td class="py-3 px-4 text-gray-600">Stage 21</td>
+                        <td class="py-3 px-4">
+                          <button class="text-indigo-600 hover:text-indigo-800">
+                            <i data-lucide="more-vertical" class="w-5 h-5" ></i>
+                          </button>
+                        </td>
+                      </tr>
+                      <tr class="border-b border-gray-100 hover:bg-white transition-colors">
+                        <td class="py-3 px-4 font-semibold text-gray-800">UAE-B02</td>
+                        <td class="py-3 px-4 text-gray-600">UAE</td>
+                        <td class="py-3 px-4 text-gray-600">Ustad Baig</td>
+                        <td class="py-3 px-4 text-gray-600">Br. Nasir</td>
+                        <td class="py-3 px-4">
+                          <span class="bg-amber-100 text-amber-700 px-3 py-1 rounded-full text-sm font-semibold">18/25</span>
+                        </td>
+                        <td class="py-3 px-4 text-gray-600">Stage 3</td>
+                        <td class="py-3 px-4">
+                          <button class="text-indigo-600 hover:text-indigo-800">
+                            <i data-lucide="more-vertical" class="w-5 h-5" ></i>
+                          </button>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <section id="security" class="min-h-screen flex items-center px-6 py-20 bg-gradient-to-br from-slate-50 via-emerald-50 to-white">
+        <div class="max-w-6xl mx-auto w-full">
+          <div class="text-center mb-12">
+            <div class="inline-block px-6 py-2 bg-emerald-100 text-emerald-800 rounded-full text-sm font-semibold mb-4">
+              Security &amp; Compliance
+            </div>
+            <h2 class="text-5xl font-bold text-gray-900 mb-4">Security, Ethics &amp; Compliance</h2>
+            <p class="text-gray-600 text-lg">Policies rooted in amanah (trust) ensure every class upholds privacy, responsibility, and safety.</p>
+          </div>
+          
+          <div class="bg-white rounded-3xl shadow-2xl border-4 border-emerald-200 p-8 space-y-8">
+            <div class="grid gap-6 md:grid-cols-2">
+              <div class="bg-white border border-emerald-100 rounded-2xl p-6 shadow-lg">
+                <div class="flex items-center gap-3 mb-4">
+                  <div class="w-12 h-12 rounded-xl bg-emerald-600 text-white flex items-center justify-center shadow-md">
+                    <i data-lucide="camera" class="w-6 h-6"></i>
+                  </div>
+                  <div>
+                    <p class="text-xs uppercase tracking-widest text-emerald-600 font-semibold">Camera Mandatory Policy</p>
+                    <h3 class="text-2xl font-semibold text-gray-900">Etiquette Enforcement</h3>
+                  </div>
+                </div>
+                <ul class="space-y-3 text-gray-700">
+                  <li class="flex gap-2">
+                    <i data-lucide="check-circle" class="w-4 h-4 text-emerald-600 mt-1"></i>
+                    <span>Camera-on requirement is built into the class guidelines.</span>
+                  </li>
+                  <li class="flex gap-2">
+                    <i data-lucide="info" class="w-4 h-4 text-emerald-600 mt-1"></i>
+                    <span>Communicated clearly throughout the UI and reminders before class.</span>
+                  </li>
+                </ul>
+              </div>
+              
+              <div class="bg-white border border-emerald-100 rounded-2xl p-6 shadow-lg">
+                <div class="flex items-center gap-3 mb-4">
+                  <div class="w-12 h-12 rounded-xl bg-emerald-600 text-white flex items-center justify-center shadow-md">
+                    <i data-lucide="smartphone" class="w-6 h-6"></i>
+                  </div>
+                  <div>
+                    <p class="text-xs uppercase tracking-widest text-emerald-600 font-semibold">Single Active Session</p>
+                    <h3 class="text-2xl font-semibold text-gray-900">One Account &middot; One Student</h3>
+                  </div>
+                </div>
+                <ul class="space-y-3 text-gray-700">
+                  <li class="flex gap-2">
+                    <i data-lucide="lock" class="w-4 h-4 text-emerald-600 mt-1"></i>
+                    <span>Session management prevents concurrent logins and account sharing.</span>
+                  </li>
+                  <li class="flex gap-2">
+                    <i data-lucide="user-check" class="w-4 h-4 text-emerald-600 mt-1"></i>
+                    <span>Guarantees each enrolled learner participates personally.</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            
+            <div class="grid gap-6 md:grid-cols-2">
+              <div class="bg-white border border-emerald-100 rounded-2xl p-6 shadow-lg">
+                <div class="flex items-center gap-3 mb-4">
+                  <div class="w-12 h-12 rounded-xl bg-emerald-600 text-white flex items-center justify-center shadow-md">
+                    <i data-lucide="map-pin" class="w-6 h-6"></i>
+                  </div>
+                  <div>
+                    <p class="text-xs uppercase tracking-widest text-emerald-600 font-semibold">Geo-Restriction</p>
+                    <h3 class="text-2xl font-semibold text-gray-900">Regional Integrity</h3>
+                  </div>
+                </div>
+                <ul class="space-y-3 text-gray-700">
+                  <li class="flex gap-2">
+                    <i data-lucide="globe" class="w-4 h-4 text-emerald-600 mt-1"></i>
+                    <span>Optional policy to limit access by country or region.</span>
+                  </li>
+                  <li class="flex gap-2">
+                    <i data-lucide="shield" class="w-4 h-4 text-emerald-600 mt-1"></i>
+                    <span>Ensures batches remain region-specific where required.</span>
+                  </li>
+                </ul>
+              </div>
+              
+              <div class="bg-white border border-emerald-100 rounded-2xl p-6 shadow-lg">
+                <div class="flex items-center gap-3 mb-4">
+                  <div class="w-12 h-12 rounded-xl bg-emerald-600 text-white flex items-center justify-center shadow-md">
+                    <i data-lucide="database" class="w-6 h-6"></i>
+                  </div>
+                  <div>
+                    <p class="text-xs uppercase tracking-widest text-emerald-600 font-semibold">Data Protection</p>
+                    <h3 class="text-2xl font-semibold text-gray-900">Secure by Design</h3>
+                  </div>
+                </div>
+                <ul class="space-y-3 text-gray-700">
+                  <li class="flex gap-2">
+                    <i data-lucide="shield-check" class="w-4 h-4 text-emerald-600 mt-1"></i>
+                    <span>End-to-end HTTPS for all traffic.</span>
+                  </li>
+                  <li class="flex gap-2">
+                    <i data-lucide="hard-drive" class="w-4 h-4 text-emerald-600 mt-1"></i>
+                    <span>Sensitive personal data encrypted at rest.</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            
+            <div class="grid gap-6 md:grid-cols-2">
+              <div class="bg-white border border-emerald-100 rounded-2xl p-6 shadow-lg">
+                <div class="flex items-center gap-3 mb-4">
+                  <div class="w-12 h-12 rounded-xl bg-emerald-600 text-white flex items-center justify-center shadow-md">
+                    <i data-lucide="headphones" class="w-6 h-6"></i>
+                  </div>
+                  <div>
+                    <p class="text-xs uppercase tracking-widest text-emerald-600 font-semibold">Audio Protection</p>
+                    <h3 class="text-2xl font-semibold text-gray-900">Stream-Only Control</h3>
+                  </div>
+                </div>
+                <ul class="space-y-3 text-gray-700">
+                  <li class="flex gap-2">
+                    <i data-lucide="music" class="w-4 h-4 text-emerald-600 mt-1"></i>
+                    <span>Class recordings available via protected streaming.</span>
+                  </li>
+                  <li class="flex gap-2">
+                    <i data-lucide="slash" class="w-4 h-4 text-emerald-600 mt-1"></i>
+                    <span>No downloads to prevent unauthorized sharing.</span>
+                  </li>
+                </ul>
+              </div>
+              
+              <div class="bg-white border border-emerald-100 rounded-2xl p-6 shadow-lg">
+                <div class="flex items-center gap-3 mb-4">
+                  <div class="w-12 h-12 rounded-xl bg-emerald-600 text-white flex items-center justify-center shadow-md">
+                    <i data-lucide="clipboard-list" class="w-6 h-6"></i>
+                  </div>
+                  <div>
+                    <p class="text-xs uppercase tracking-widest text-emerald-600 font-semibold">Audit Logging</p>
+                    <h3 class="text-2xl font-semibold text-gray-900">Traceable Interactions</h3>
+                  </div>
+                </div>
+                <ul class="space-y-3 text-gray-700">
+                  <li class="flex gap-2">
+                    <i data-lucide="activity" class="w-4 h-4 text-emerald-600 mt-1"></i>
+                    <span>Joins, task submissions, and quiz attempts logged centrally.</span>
+                  </li>
+                  <li class="flex gap-2">
+                    <i data-lucide="file-lock" class="w-4 h-4 text-emerald-600 mt-1"></i>
+                    <span>Supports quality control and incident response.</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            
+            <div class="bg-gradient-to-r from-emerald-600 to-teal-600 text-white rounded-3xl p-8 shadow-2xl border-l-4 border-amber-400">
+              <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+                <div class="flex items-center gap-4">
+                  <div class="w-14 h-14 rounded-full bg-white/20 flex items-center justify-center">
+                    <i data-lucide="heart" class="w-7 h-7 text-white"></i>
+                  </div>
+                  <div>
+                    <p class="uppercase text-sm tracking-widest text-amber-200">Stakeholder Reasoning</p>
+                    <h4 class="text-2xl font-semibold text-white">Ethics Backed by Technology</h4>
+                  </div>
+                </div>
+                <p class="text-lg text-emerald-50 md:flex-1">Aligns with amanah, privacy, and responsibility while ensuring the program's integrity remains uncompromised.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      
+      <section id="zoom-integration" class="min-h-screen flex items-center px-6 py-20 bg-gradient-to-br from-slate-50 via-white to-blue-50">
+        <div class="max-w-6xl mx-auto w-full">
+          <div class="text-center mb-12">
+            <div class="inline-block px-6 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-semibold mb-4">
+              Zoom Integration (Technical View)
+            </div>
+            <h2 class="text-5xl font-bold text-gray-900 mb-4">Zoom Integration &mdash; Current &amp; Future</h2>
+            <p class="text-gray-600 text-lg">Progressive rollout ensures we start reliable and build toward deeper insight.</p>
+          </div>
+          
+          <div class="bg-white rounded-3xl shadow-2xl border-4 border-blue-200 p-8 space-y-8">
+            <div class="grid gap-6 md:grid-cols-3">
+              <div class="bg-gradient-to-br from-emerald-500 to-emerald-600 text-white rounded-2xl p-6 shadow-lg">
+                <div class="flex items-center gap-3 mb-4">
+                  <div class="w-12 h-12 rounded-xl bg-white/20 flex items-center justify-center">
+                    <i data-lucide="check-square" class="w-6 h-6"></i>
+                  </div>
+                  <div>
+                    <p class="text-xs uppercase tracking-widest text-emerald-100">Phase 1 &mdash; Now</p>
+                    <h3 class="text-2xl font-semibold">Core Link Flow</h3>
+                  </div>
+                </div>
+                <ul class="space-y-3 text-sm">
+                  <li class="flex gap-2">
+                    <i data-lucide="link" class="w-4 h-4"></i>
+                    <span>Store Zoom link securely inside the platform.</span>
+                  </li>
+                  <li class="flex gap-2">
+                    <i data-lucide="mouse-pointer" class="w-4 h-4"></i>
+                    <span>“Join Class” button redirects directly to Zoom.</span>
+                  </li>
+                  <li class="flex gap-2">
+                    <i data-lucide="user-check" class="w-4 h-4"></i>
+                    <span>Attendance marked when a student clicks Join.</span>
+                  </li>
+                </ul>
+              </div>
+              
+              <div class="bg-gradient-to-br from-blue-500 to-indigo-600 text-white rounded-2xl p-6 shadow-lg">
+                <div class="flex items-center gap-3 mb-4">
+                  <div class="w-12 h-12 rounded-xl bg-white/20 flex items-center justify-center">
+                    <i data-lucide="cpu" class="w-6 h-6"></i>
+                  </div>
+                  <div>
+                    <p class="text-xs uppercase tracking-widest text-blue-100">Phase 2 &mdash; Planned</p>
+                    <h3 class="text-2xl font-semibold">API &amp; Webhooks</h3>
+                  </div>
+                </div>
+                <ul class="space-y-3 text-sm">
+                  <li class="flex gap-2">
+                    <i data-lucide="activity" class="w-4 h-4"></i>
+                    <span>Integrate Zoom APIs to track join/leave events.</span>
+                  </li>
+                  <li class="flex gap-2">
+                    <i data-lucide="clock" class="w-4 h-4"></i>
+                    <span>Calculate actual attendance duration.</span>
+                  </li>
+                  <li class="flex gap-2">
+                    <i data-lucide="database" class="w-4 h-4"></i>
+                    <span>Sync data with dashboards for accuracy.</span>
+                  </li>
+                </ul>
+              </div>
+              
+              <div class="bg-gradient-to-br from-purple-500 to-purple-700 text-white rounded-2xl p-6 shadow-lg">
+                <div class="flex items-center gap-3 mb-4">
+                  <div class="w-12 h-12 rounded-xl bg-white/20 flex items-center justify-center">
+                    <i data-lucide="monitor" class="w-6 h-6"></i>
+                  </div>
+                  <div>
+                    <p class="text-xs uppercase tracking-widest text-purple-100">Phase 3 &mdash; Optional</p>
+                    <h3 class="text-2xl font-semibold">Embedded Experience</h3>
+                  </div>
+                </div>
+                <ul class="space-y-3 text-sm">
+                  <li class="flex gap-2">
+                    <i data-lucide="video" class="w-4 h-4"></i>
+                    <span>Embed Zoom via Zoom Web SDK inside the web app.</span>
+                  </li>
+                  <li class="flex gap-2">
+                    <i data-lucide="shield" class="w-4 h-4"></i>
+                    <span>Maintain security policies while reducing context switching.</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            
+            <div class="bg-gradient-to-r from-emerald-600 to-teal-600 text-white rounded-3xl p-8 shadow-2xl border-l-4 border-amber-400">
+              <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+                <div class="flex items-center gap-4">
+                  <div class="w-14 h-14 rounded-full bg-white/20 flex items-center justify-center">
+                    <i data-lucide="heart" class="w-7 h-7 text-white"></i>
+                  </div>
+                  <div>
+                    <p class="uppercase text-sm tracking-widest text-amber-200">Stakeholder Reasoning</p>
+                    <h4 class="text-2xl font-semibold text-white">Progressive Improvement</h4>
+                  </div>
+                </div>
+                <p class="text-lg text-emerald-50 md:flex-1">Start simple and reliable, then add deeper accuracy and insight as the program matures.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <section id="roadmap" class="min-h-screen flex items-center px-6 py-20 bg-gradient-to-br from-emerald-50 via-amber-50 to-white">
+        <div class="max-w-6xl mx-auto w-full">
+          <div class="text-center mb-12">
+            <div class="inline-block px-6 py-2 bg-emerald-100 text-emerald-800 rounded-full text-sm font-semibold mb-4">
+              Implementation Roadmap
+            </div>
+            <h2 class="text-5xl font-bold text-gray-900 mb-4">Phased Rollout Plan</h2>
+            <p class="text-gray-600 text-lg">Delivering the platform in focused phases ensures quality, adoption, and measurable outcomes.</p>
+          </div>
+          
+          <div class="bg-white rounded-3xl shadow-2xl border-4 border-emerald-200 p-8 space-y-8">
+            <div class="grid gap-6 md:grid-cols-3">
+              <div class="bg-gradient-to-br from-emerald-500 to-teal-600 text-white rounded-2xl p-6 shadow-lg">
+                <div class="flex items-center gap-3 mb-4">
+                  <div class="w-12 h-12 rounded-xl bg-white/20 flex items-center justify-center">
+                    <i data-lucide="flag" class="w-6 h-6"></i>
+                  </div>
+                  <div>
+                    <p class="text-xs uppercase tracking-widest text-emerald-100">Phase 1</p>
+                    <h3 class="text-2xl font-semibold">Core MVP</h3>
+                  </div>
+                </div>
+                <ul class="space-y-3 text-sm">
+                  <li class="flex gap-2">
+                    <i data-lucide="user-plus" class="w-4 h-4"></i>
+                    <span>Digital enrollment &amp; structured intake.</span>
+                  </li>
+                  <li class="flex gap-2">
+                    <i data-lucide="layout-dashboard" class="w-4 h-4"></i>
+                    <span>Student dashboard, join class, attendance tracking.</span>
+                  </li>
+                  <li class="flex gap-2">
+                    <i data-lucide="book-open-check" class="w-4 h-4"></i>
+                    <span>Surah modules, audio, notes, and weekly tasks.</span>
+                  </li>
+                </ul>
+              </div>
+              
+              <div class="bg-gradient-to-br from-amber-500 to-orange-600 text-white rounded-2xl p-6 shadow-lg">
+                <div class="flex items-center gap-3 mb-4">
+                  <div class="w-12 h-12 rounded-xl bg-white/20 flex items-center justify-center">
+                    <i data-lucide="target" class="w-6 h-6"></i>
+                  </div>
+                  <div>
+                    <p class="text-xs uppercase tracking-widest text-amber-100">Phase 2</p>
+                    <h3 class="text-2xl font-semibold">Learning &amp; Insight</h3>
+                  </div>
+                </div>
+                <ul class="space-y-3 text-sm">
+                  <li class="flex gap-2">
+                    <i data-lucide="help-circle" class="w-4 h-4"></i>
+                    <span>Surah quizzes and stage assessments.</span>
+                  </li>
+                  <li class="flex gap-2">
+                    <i data-lucide="users" class="w-4 h-4"></i>
+                    <span>Coordinator &amp; teacher dashboards.</span>
+                  </li>
+                  <li class="flex gap-2">
+                    <i data-lucide="bar-chart-3" class="w-4 h-4"></i>
+                    <span>Progress tracking and analytics.</span>
+                  </li>
+                </ul>
+              </div>
+              
+              <div class="bg-gradient-to-br from-purple-500 to-indigo-600 text-white rounded-2xl p-6 shadow-lg">
+                <div class="flex items-center gap-3 mb-4">
+                  <div class="w-12 h-12 rounded-xl bg-white/20 flex items-center justify-center">
+                    <i data-lucide="star" class="w-6 h-6"></i>
+                  </div>
+                  <div>
+                    <p class="text-xs uppercase tracking-widest text-purple-100">Phase 3</p>
+                    <h3 class="text-2xl font-semibold">Advanced &amp; Expansion</h3>
+                  </div>
+                </div>
+                <ul class="space-y-3 text-sm">
+                  <li class="flex gap-2">
+                    <i data-lucide="video" class="w-4 h-4"></i>
+                    <span>Zoom API automation (join/leave, attendance sync).</span>
+                  </li>
+                  <li class="flex gap-2">
+                    <i data-lucide="award" class="w-4 h-4"></i>
+                    <span>Gamification features (badges, streaks).</span>
+                  </li>
+                  <li class="flex gap-2">
+                    <i data-lucide="globe" class="w-4 h-4"></i>
+                    <span>Multi-region rollout and feature refinements.</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            
+            <div class="bg-gradient-to-r from-emerald-600 to-teal-600 text-white rounded-3xl p-8 shadow-2xl border-l-4 border-amber-400">
+              <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+                <div class="flex items-center gap-4">
+                  <div class="w-14 h-14 rounded-full bg-white/20 flex items-center justify-center">
+                    <i data-lucide="calendar" class="w-7 h-7 text-white"></i>
+                  </div>
+                  <div>
+                    <p class="uppercase text-sm tracking-widest text-amber-200">Stakeholder Reasoning</p>
+                    <h4 class="text-2xl font-semibold text-white">Measured Rollout, Maximum Impact</h4>
+                  </div>
+                </div>
+                <p class="text-lg text-emerald-50 md:flex-1">We’re planning a realistic, controlled implementation &mdash; not a big-bang &mdash; ensuring each phase is adopted, refined, and celebrated.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      
+
+      
+      
+      <section id="architecture" class="min-h-screen flex items-center px-6 py-20 bg-gradient-to-br from-slate-900 to-indigo-900 text-white relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+          <div class="absolute top-20 left-20 w-96 h-96 bg-emerald-400 rounded-full blur-3xl" ></div>
+          <div class="absolute bottom-20 right-20 w-96 h-96 bg-amber-400 rounded-full blur-3xl" ></div>
+        </div>
+        
+        <div class="max-w-6xl mx-auto relative z-10">
+          <div class="text-center mb-16">
+            <div class="inline-block px-6 py-2 bg-emerald-500/20 border border-emerald-400/30 text-emerald-300 rounded-full text-sm font-semibold mb-4">
+              Technical Foundation
+            </div>
+            <h2 class="text-5xl font-bold mb-4">Technical Architecture</h2>
+            <div class="w-24 h-1 bg-gradient-to-r from-emerald-400 via-amber-400 to-teal-400 mx-auto mb-4" ></div>
+            <p class="text-lg text-slate-300">Modern stack for longevity, maintainability, and scalability</p>
+          </div>
+          
+          
+          <div class="grid md:grid-cols-3 gap-6 mb-12">
+            
+            <div class="bg-white/10 backdrop-blur-lg p-6 rounded-2xl border border-white/20 shadow-2xl">
+              <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-700 rounded-xl flex items-center justify-center mb-4 shadow-lg">
+                <i data-lucide="globe" class="w-8 h-8 text-white" ></i>
+              </div>
+              <h3 class="text-2xl font-semibold mb-4 text-amber-300">Frontend</h3>
+              <div class="space-y-3">
+                <div class="bg-white/5 p-3 rounded-lg">
+                  <p class="font-semibold text-white mb-1">Web Application</p>
+                  <p class="text-sm text-slate-300">React with Modern UI/UX</p>
+                </div>
+                <div class="bg-white/5 p-3 rounded-lg">
+                  <p class="font-semibold text-white mb-1">Mobile App (Future)</p>
+                  <p class="text-sm text-slate-300">React Native for iOS & Android</p>
+                </div>
+                <div class="bg-white/5 p-3 rounded-lg">
+                  <p class="font-semibold text-white mb-1">Responsive Design</p>
+                  <p class="text-sm text-slate-300">Works on all devices</p>
+                </div>
+              </div>
+            </div>
+            
+            
+            <div class="bg-white/10 backdrop-blur-lg p-6 rounded-2xl border border-white/20 shadow-2xl">
+              <div class="w-16 h-16 bg-gradient-to-br from-emerald-500 to-emerald-700 rounded-xl flex items-center justify-center mb-4 shadow-lg">
+                <i data-lucide="zap" class="w-8 h-8 text-white" ></i>
+              </div>
+              <h3 class="text-2xl font-semibold mb-4 text-amber-300">Backend</h3>
+              <div class="space-y-3">
+                <div class="bg-white/5 p-3 rounded-lg">
+                  <p class="font-semibold text-white mb-1">.NET 8 Web API</p>
+                  <p class="text-sm text-slate-300">Clean Architecture pattern</p>
+                </div>
+                <div class="bg-white/5 p-3 rounded-lg">
+                  <p class="font-semibold text-white mb-1">Modular Design</p>
+                  <p class="text-sm text-slate-300">Service-oriented architecture</p>
+                </div>
+                <div class="bg-white/5 p-3 rounded-lg">
+                  <p class="font-semibold text-white mb-1">RESTful APIs</p>
+                  <p class="text-sm text-slate-300">Scalable endpoints</p>
+                </div>
+              </div>
+            </div>
+            
+            
+            <div class="bg-white/10 backdrop-blur-lg p-6 rounded-2xl border border-white/20 shadow-2xl">
+              <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-700 rounded-xl flex items-center justify-center mb-4 shadow-lg">
+                <i data-lucide="file-text" class="w-8 h-8 text-white" ></i>
+              </div>
+              <h3 class="text-2xl font-semibold mb-4 text-amber-300">Database</h3>
+              <div class="space-y-3">
+                <div class="bg-white/5 p-3 rounded-lg">
+                  <p class="font-semibold text-white mb-1">SQL Server</p>
+                  <p class="text-sm text-slate-300">Enterprise-grade database</p>
+                </div>
+                <div class="bg-white/5 p-3 rounded-lg">
+                  <p class="font-semibold text-white mb-1">Data Security</p>
+                  <p class="text-sm text-slate-300">Encrypted & backed up</p>
+                </div>
+                <div class="bg-white/5 p-3 rounded-lg">
+                  <p class="font-semibold text-white mb-1">High Performance</p>
+                  <p class="text-sm text-slate-300">Optimized queries</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          
+          <div class="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-lg p-8 rounded-2xl border border-white/20 mb-12 shadow-2xl">
+            <h3 class="text-2xl font-semibold mb-6 text-amber-300 flex items-center gap-3">
+              <i data-lucide="target" class="w-8 h-8" ></i>
+              Modular Domain Architecture
+            </h3>
+                        <div class="grid gap-4 sm:grid-cols-2 md:grid-cols-3">
+              <div class="bg-white/10 backdrop-blur p-4 rounded-xl border border-white/20 hover:bg-white/20 transition-all">
+                <i data-lucide="users" class="w-8 h-8 text-amber-300 mb-2"></i>
+                <h4 class="font-semibold text-white mb-1">Enrollment</h4>
+                <p class="text-xs text-slate-300">Application &amp; batch assignment</p>
+              </div>
+              <div class="bg-white/10 backdrop-blur p-4 rounded-xl border border-white/20 hover:bg-white/20 transition-all">
+                <i data-lucide="video" class="w-8 h-8 text-amber-300 mb-2"></i>
+                <h4 class="font-semibold text-white mb-1">Classes</h4>
+                <p class="text-xs text-slate-300">Scheduling &amp; attendance</p>
+              </div>
+              <div class="bg-white/10 backdrop-blur p-4 rounded-xl border border-white/20 hover:bg-white/20 transition-all">
+                <i data-lucide="book-open" class="w-8 h-8 text-amber-300 mb-2"></i>
+                <h4 class="font-semibold text-white mb-1">Learning Content</h4>
+                <p class="text-xs text-slate-300">Surahs &amp; stage management</p>
+              </div>
+              <div class="bg-white/10 backdrop-blur p-4 rounded-xl border border-white/20 hover:bg-white/20 transition-all">
+                <i data-lucide="award" class="w-8 h-8 text-amber-300 mb-2"></i>
+                <h4 class="font-semibold text-white mb-1">Quiz &amp; Assessment</h4>
+                <p class="text-xs text-slate-300">Testing &amp; evaluation</p>
+              </div>
+              <div class="bg-white/10 backdrop-blur p-4 rounded-xl border border-white/20 hover:bg-white/20 transition-all">
+                <i data-lucide="trending-up" class="w-8 h-8 text-amber-300 mb-2"></i>
+                <h4 class="font-semibold text-white mb-1">Progress Tracking</h4>
+                <p class="text-xs text-slate-300">Student journey analytics</p>
+              </div>
+              <div class="bg-white/10 backdrop-blur p-4 rounded-xl border border-white/20 hover:bg-white/20 transition-all">
+                <i data-lucide="bar-chart-3" class="w-8 h-8 text-amber-300 mb-2"></i>
+                <h4 class="font-semibold text-white mb-1">Analytics</h4>
+                <p class="text-xs text-slate-300">Insights &amp; reporting</p>
+              </div>
+            </div>
+
+          </div>
+          
+          
+          <div class="grid md:grid-cols-2 gap-6 mb-12">
+            <div class="bg-gradient-to-br from-blue-500/20 to-blue-700/20 backdrop-blur-lg p-6 rounded-2xl border border-blue-400/30 shadow-xl">
+              <div class="flex items-center gap-3 mb-4">
+                <div class="w-12 h-12 bg-blue-500 rounded-lg flex items-center justify-center">
+                  <i data-lucide="video" class="w-6 h-6 text-white" ></i>
+                </div>
+                <div>
+                  <h4 class="text-xl font-semibold text-white">Zoom API Integration</h4>
+                  <p class="text-sm text-blue-200">Future enhancement</p>
+                </div>
+              </div>
+              <ul class="space-y-2 text-sm text-slate-200">
+                <li class="flex items-center gap-2">
+                  <i data-lucide="check-circle" class="w-4 h-4 text-blue-300" ></i>
+                  <span>Automated join/leave tracking</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <i data-lucide="check-circle" class="w-4 h-4 text-blue-300" ></i>
+                  <span>Real-time attendance monitoring</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <i data-lucide="check-circle" class="w-4 h-4 text-blue-300" ></i>
+                  <span>Recording management</span>
+                </li>
+              </ul>
+            </div>
+            
+            <div class="bg-gradient-to-br from-green-500/20 to-green-700/20 backdrop-blur-lg p-6 rounded-2xl border border-green-400/30 shadow-xl">
+              <div class="flex items-center gap-3 mb-4">
+                <div class="w-12 h-12 bg-green-500 rounded-lg flex items-center justify-center">
+                  <i data-lucide="bell" class="w-6 h-6 text-white" ></i>
+                </div>
+                <div>
+                  <h4 class="text-xl font-semibold text-white">Notification Systems</h4>
+                  <p class="text-sm text-green-200">Optional future features</p>
+                </div>
+              </div>
+              <ul class="space-y-2 text-sm text-slate-200">
+                <li class="flex items-center gap-2">
+                  <i data-lucide="check-circle" class="w-4 h-4 text-green-300" ></i>
+                  <span>WhatsApp notifications</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <i data-lucide="check-circle" class="w-4 h-4 text-green-300" ></i>
+                  <span>Email reminders</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <i data-lucide="check-circle" class="w-4 h-4 text-green-300" ></i>
+                  <span>Push notifications (mobile)</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          
+          
+          <div class="bg-gradient-to-r from-amber-500/20 to-emerald-500/20 backdrop-blur-lg border border-amber-400/30 p-8 rounded-2xl shadow-2xl">
+            <div class="flex items-start gap-4">
+              <div class="w-14 h-14 bg-amber-500 rounded-full flex items-center justify-center flex-shrink-0 shadow-lg">
+                <i data-lucide="star" class="w-7 h-7 text-white" ></i>
+              </div>
+              <div>
+                <h4 class="text-2xl font-semibold text-white mb-3">Why This Architecture?</h4>
+                <div class="grid md:grid-cols-3 gap-4 text-sm">
+                  <div class="flex items-start gap-2">
+                    <i data-lucide="check-circle" class="w-5 h-5 text-amber-300 flex-shrink-0 mt-0.5" ></i>
+                    <div>
+                      <p class="font-semibold text-white">Longevity</p>
+                      <p class="text-slate-300">Modern, well-supported technologies</p>
+                    </div>
+                  </div>
+                  <div class="flex items-start gap-2">
+                    <i data-lucide="check-circle" class="w-5 h-5 text-amber-300 flex-shrink-0 mt-0.5" ></i>
+                    <div>
+                      <p class="font-semibold text-white">Maintainability</p>
+                      <p class="text-slate-300">Clean code, easy to update</p>
+                    </div>
+                  </div>
+                  <div class="flex items-start gap-2">
+                    <i data-lucide="check-circle" class="w-5 h-5 text-amber-300 flex-shrink-0 mt-0.5" ></i>
+                    <div>
+                      <p class="font-semibold text-white">Scalability</p>
+                      <p class="text-slate-300">Grows with your needs</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      
+      <section id="management-dashboard-example" class="min-h-screen flex items-center px-6 py-20 bg-gradient-to-br from-slate-50 to-blue-50">
+        <div class="max-w-7xl mx-auto w-full">
+          <div class="text-center mb-12">
+            <div class="inline-block px-6 py-2 bg-slate-700 text-white rounded-full text-sm font-semibold mb-4">
+              Management View
+            </div>
+            <h2 class="text-5xl font-bold text-gray-800 mb-4">Management Analytics Dashboard</h2>
+            <div class="w-24 h-1 bg-gradient-to-r from-emerald-600 via-amber-500 to-teal-600 mx-auto mb-4" ></div>
+            <p class="text-gray-600">Strategic insights for data-driven decisions</p>
+          </div>
+          
+          
+          <div class="bg-white rounded-3xl shadow-2xl overflow-hidden border-4 border-slate-700">
+            
+            <div class="bg-gradient-to-r from-slate-700 to-slate-900 p-6 text-white">
+              <div class="flex justify-between items-center">
+                <div>
+                  <h3 class="text-2xl font-bold">Program Analytics</h3>
+                  <p class="text-slate-300">Real-time insights across all batches</p>
+                </div>
+                <div class="flex gap-3">
+                  <select class="bg-white/20 backdrop-blur text-white px-4 py-2 rounded-lg border border-white/30">
+                    <option>Last 30 Days</option>
+                    <option>Last 90 Days</option>
+                    <option>This Year</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="p-6">
+              <div class="flex flex-col lg:flex-row gap-6">
+                <aside class="w-full lg:w-64 bg-slate-100 border border-slate-200 rounded-2xl p-5 shadow-sm">
+                  <div class="flex items-center justify-between mb-4">
+                    <h4 class="text-lg font-semibold text-slate-900">Leadership Menu</h4>
+                    <i data-lucide="menu" class="w-5 h-5 text-slate-500 lg:hidden"></i>
+                  </div>
+                  <nav class="space-y-2 text-slate-900">
+                    <button class="w-full flex items-center justify-between px-4 py-3 rounded-xl text-sm font-semibold bg-white shadow border border-slate-200">
+                      <span class="flex items-center gap-3">
+                        <i data-lucide="layout-dashboard" class="w-4 h-4 text-slate-600"></i>
+                        Executive Summary
+                      </span>
+                      <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400"></i>
+                    </button>
+                    <button class="w-full flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-semibold text-slate-800 bg-slate-200/70 border border-slate-300">
+                      <i data-lucide="target" class="w-4 h-4 text-slate-600"></i>
+                      Key KPIs
+                    </button>
+                    <button class="w-full flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-semibold text-slate-800 hover:bg-white border border-transparent hover:border-slate-200 transition">
+                      <i data-lucide="map-pin" class="w-4 h-4 text-slate-600"></i>
+                      Batch Performance
+                    </button>
+                    <button class="w-full flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-semibold text-slate-800 hover:bg-white border border-transparent hover:border-slate-200 transition">
+                      <i data-lucide="trending-up" class="w-4 h-4 text-slate-600"></i>
+                      Growth Plan
+                    </button>
+                    <button class="w-full flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-semibold text-slate-800 hover:bg-white border border-transparent hover:border-slate-200 transition">
+                      <i data-lucide="download" class="w-4 h-4 text-slate-600"></i>
+                      Downloads
+                    </button>
+                  </nav>
+                </aside>
+                <div class="flex-1 space-y-6">
+              
+              <div class="grid md:grid-cols-4 gap-6 mb-6">
+                <div class="bg-gradient-to-br from-emerald-500 to-emerald-600 p-6 rounded-2xl text-white shadow-lg">
+                  <i data-lucide="users" class="w-10 h-10 mb-3 opacity-80" ></i>
+                  <p class="text-sm text-emerald-100 mb-1">Total Students</p>
+                  <p class="text-4xl font-bold">287</p>
+                  <p class="text-sm text-emerald-100 mt-2">↑ 12% from last month</p>
+                </div>
+                
+                <div class="bg-gradient-to-br from-blue-500 to-blue-600 p-6 rounded-2xl text-white shadow-lg">
+                  <i data-lucide="check-circle" class="w-10 h-10 mb-3 opacity-80" ></i>
+                  <p class="text-sm text-blue-100 mb-1">Avg Attendance</p>
+                  <p class="text-4xl font-bold">86%</p>
+                  <p class="text-sm text-blue-100 mt-2">↑ 3% from last month</p>
+                </div>
+                
+                <div class="bg-gradient-to-br from-purple-500 to-purple-600 p-6 rounded-2xl text-white shadow-lg">
+                  <i data-lucide="award" class="w-10 h-10 mb-3 opacity-80" ></i>
+                  <p class="text-sm text-purple-100 mb-1">Avg Quiz Score</p>
+                  <p class="text-4xl font-bold">83%</p>
+                  <p class="text-sm text-purple-100 mt-2">↑ 5% from last month</p>
+                </div>
+                
+                <div class="bg-gradient-to-br from-amber-500 to-amber-600 p-6 rounded-2xl text-white shadow-lg">
+                  <i data-lucide="trending-up" class="w-10 h-10 mb-3 opacity-80" ></i>
+                  <p class="text-sm text-amber-100 mb-1">Task Completion</p>
+                  <p class="text-4xl font-bold">78%</p>
+                  <p class="text-sm text-amber-100 mt-2">↑ 8% from last month</p>
+                </div>
+              </div>
+              
+              
+              <div class="bg-gray-50 p-6 rounded-2xl mb-6">
+                <h4 class="text-xl font-semibold text-gray-800 mb-4">Batch Performance Heatmap</h4>
+                <div class="overflow-x-auto">
+                  <table class="w-full">
+                    <thead>
+                      <tr class="border-b-2 border-gray-200">
+                        <th class="text-left py-3 px-4 text-gray-600 font-semibold">Batch</th>
+                        <th class="text-center py-3 px-4 text-gray-600 font-semibold">Attendance</th>
+                        <th class="text-center py-3 px-4 text-gray-600 font-semibold">Task Completion</th>
+                        <th class="text-center py-3 px-4 text-gray-600 font-semibold">Quiz Average</th>
+                        <th class="text-center py-3 px-4 text-gray-600 font-semibold">At-Risk Students</th>
+                        <th class="text-center py-3 px-4 text-gray-600 font-semibold">Status</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr class="border-b border-gray-100 hover:bg-white transition-colors">
+                        <td class="py-3 px-4 font-semibold text-gray-800">UAE-B01</td>
+                        <td class="py-3 px-4 text-center">
+                          <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm font-semibold">88%</span>
+                        </td>
+                        <td class="py-3 px-4 text-center">
+                          <span class="bg-amber-100 text-amber-700 px-3 py-1 rounded-full text-sm font-semibold">76%</span>
+                        </td>
+                        <td class="py-3 px-4 text-center">
+                          <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm font-semibold">82%</span>
+                        </td>
+                        <td class="py-3 px-4 text-center">
+                          <span class="text-amber-600 font-semibold">3</span>
+                        </td>
+                        <td class="py-3 px-4 text-center">
+                          <div class="w-3 h-3 bg-green-500 rounded-full mx-auto" ></div>
+                        </td>
+                      </tr>
+                      
+                      <tr class="border-b border-gray-100 hover:bg-white transition-colors">
+                        <td class="py-3 px-4 font-semibold text-gray-800">UAE-B02</td>
+                        <td class="py-3 px-4 text-center">
+                          <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm font-semibold">92%</span>
+                        </td>
+                        <td class="py-3 px-4 text-center">
+                          <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm font-semibold">85%</span>
+                        </td>
+                        <td class="py-3 px-4 text-center">
+                          <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm font-semibold">87%</span>
+                        </td>
+                        <td class="py-3 px-4 text-center">
+                          <span class="text-green-600 font-semibold">1</span>
+                        </td>
+                        <td class="py-3 px-4 text-center">
+                          <div class="w-3 h-3 bg-green-500 rounded-full mx-auto" ></div>
+                        </td>
+                      </tr>
+                      
+                      <tr class="border-b border-gray-100 hover:bg-white transition-colors">
+                        <td class="py-3 px-4 font-semibold text-gray-800">UK-B01</td>
+                        <td class="py-3 px-4 text-center">
+                          <span class="bg-amber-100 text-amber-700 px-3 py-1 rounded-full text-sm font-semibold">74%</span>
+                        </td>
+                        <td class="py-3 px-4 text-center">
+                          <span class="bg-red-100 text-red-700 px-3 py-1 rounded-full text-sm font-semibold">62%</span>
+                        </td>
+                        <td class="py-3 px-4 text-center">
+                          <span class="bg-amber-100 text-amber-700 px-3 py-1 rounded-full text-sm font-semibold">75%</span>
+                        </td>
+                        <td class="py-3 px-4 text-center">
+                          <span class="text-red-600 font-semibold">7</span>
+                        </td>
+                        <td class="py-3 px-4 text-center">
+                          <div class="w-3 h-3 bg-amber-500 rounded-full mx-auto" ></div>
+                        </td>
+                      </tr>
+                      
+                      <tr class="border-b border-gray-100 hover:bg-white transition-colors">
+                        <td class="py-3 px-4 font-semibold text-gray-800">USA-B01</td>
+                        <td class="py-3 px-4 text-center">
+                          <span class="bg-red-100 text-red-700 px-3 py-1 rounded-full text-sm font-semibold">68%</span>
+                        </td>
+                        <td class="py-3 px-4 text-center">
+                          <span class="bg-red-100 text-red-700 px-3 py-1 rounded-full text-sm font-semibold">58%</span>
+                        </td>
+                        <td class="py-3 px-4 text-center">
+                          <span class="bg-red-100 text-red-700 px-3 py-1 rounded-full text-sm font-semibold">69%</span>
+                        </td>
+                        <td class="py-3 px-4 text-center">
+                          <span class="text-red-600 font-semibold">9</span>
+                        </td>
+                        <td class="py-3 px-4 text-center">
+                          <div class="w-3 h-3 bg-red-500 rounded-full mx-auto" ></div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                
+                <div class="mt-4 flex items-center gap-6 text-sm">
+                  <div class="flex items-center gap-2">
+                    <div class="w-3 h-3 bg-green-500 rounded-full" ></div>
+                    <span class="text-gray-600">Strong Performance</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <div class="w-3 h-3 bg-amber-500 rounded-full" ></div>
+                    <span class="text-gray-600">Needs Support</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <div class="w-3 h-3 bg-red-500 rounded-full" ></div>
+                    <span class="text-gray-600">Immediate Attention Required</span>
+                  </div>
+                </div>
+              </div>
+              
+              
+              <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-gradient-to-br from-red-50 to-red-100 p-6 rounded-2xl border-2 border-red-200">
+                  <div class="flex items-center gap-3 mb-4">
+                    <div class="w-12 h-12 bg-red-500 rounded-lg flex items-center justify-center">
+                      <i data-lucide="alert-triangle" class="w-6 h-6 text-white" ></i>
+                    </div>
+                    <h5 class="text-xl font-semibold text-gray-800">At-Risk Students</h5>
+                  </div>
+                  <p class="text-4xl font-bold text-red-600 mb-2">24</p>
+                  <p class="text-sm text-gray-600 mb-4">Across all batches (8.4% of total)</p>
+                  <div class="space-y-2 text-sm">
+                    <div class="flex justify-between text-gray-700">
+                      <span>• Attendance below 70%:</span>
+                      <span class="font-semibold">12 students</span>
+                    </div>
+                    <div class="flex justify-between text-gray-700">
+                      <span>• Task completion below 60%:</span>
+                      <span class="font-semibold">16 students</span>
+                    </div>
+                    <div class="flex justify-between text-gray-700">
+                      <span>• Quiz average below 65%:</span>
+                      <span class="font-semibold">8 students</span>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-2xl border-2 border-blue-200">
+                  <div class="flex items-center gap-3 mb-4">
+                    <div class="w-12 h-12 bg-blue-500 rounded-lg flex items-center justify-center">
+                      <i data-lucide="trending-up" class="w-6 h-6 text-white" ></i>
+                    </div>
+                    <h5 class="text-xl font-semibold text-gray-800">Growth Trends</h5>
+                  </div>
+                  <div class="space-y-4">
+                    <div>
+                      <div class="flex justify-between text-sm mb-2">
+                        <span class="text-gray-700">Student Enrollment</span>
+                        <span class="text-green-600 font-semibold">↑ 15%</span>
+                      </div>
+                      <div class="w-full bg-blue-200 rounded-full h-2">
+                        <div class="bg-blue-600 h-2 rounded-full" style="width: 78%;" ></div>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="flex justify-between text-sm mb-2">
+                        <span class="text-gray-700">Overall Engagement</span>
+                        <span class="text-green-600 font-semibold">↑ 8%</span>
+                      </div>
+                      <div class="w-full bg-blue-200 rounded-full h-2">
+                        <div class="bg-blue-600 h-2 rounded-full" style="width: 82%;" ></div>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="flex justify-between text-sm mb-2">
+                        <span class="text-gray-700">Learning Outcomes</span>
+                        <span class="text-green-600 font-semibold">↑ 6%</span>
+                      </div>
+                      <div class="w-full bg-blue-200 rounded-full h-2">
+                        <div class="bg-blue-600 h-2 rounded-full" style="width: 85%;" ></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+                </div>
+              </div>
+          </div>
+        </div>
+      </section>
+
+      
+      <section id="closing" class="min-h-screen flex items-center px-6 py-20 bg-gradient-to-br from-emerald-900 via-teal-900 to-emerald-800 text-white relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+          <div class="absolute top-20 left-20 w-96 h-96 bg-amber-400 rounded-full blur-3xl" ></div>
+          <div class="absolute bottom-20 right-20 w-96 h-96 bg-emerald-400 rounded-full blur-3xl" ></div>
+        </div>
+        
+        <div class="max-w-5xl mx-auto text-center relative z-10">
+          <div class="mb-12">
+            <div class="w-32 h-32 mx-auto bg-gradient-to-br from-amber-400 to-amber-600 rounded-full flex items-center justify-center shadow-2xl mb-6 border-4 border-white/20">
+              <i data-lucide="book-open" class="w-16 h-16 text-white" ></i>
+            </div>
+            <div class="text-2xl font-arabic text-amber-300 mb-4">
+              "The best among you are those who learn the Quran and 
+teach it." <br>
+ - Prophet Muhammad (peace be upon him)
+            </div>
+          </div>
+          
+          <h2 class="text-5xl md:text-6xl font-bold mb-8 leading-tight">Together, We Build the Future of Quran Education</h2>
+          
+          <div class="w-32 h-1 bg-gradient-to-r from-transparent via-amber-400 to-transparent mx-auto mb-8" ></div>
+          
+          <p class="text-2xl md:text-3xl mb-16 leading-relaxed font-light text-emerald-100">
+            By combining technology with tradition, we create a more organized, impactful, and scalable way to serve the Quran.
+          </p>
+          
+          <div class="grid md:grid-cols-3 gap-6 mb-16">
+            <div class="bg-white/10 backdrop-blur-lg p-8 rounded-2xl border border-white/20 shadow-2xl">
+              <i data-lucide="heart" class="w-16 h-16 mx-auto mb-4 text-amber-300" ></i>
+              <h3 class="text-xl font-semibold mb-2">Serve Students Better</h3>
+              <p class="text-emerald-100">Clear structure and deeper understanding</p>
+            </div>
+            <div class="bg-white/10 backdrop-blur-lg p-8 rounded-2xl border border-white/20 shadow-2xl">
+              <i data-lucide="users" class="w-16 h-16 mx-auto mb-4 text-amber-300" ></i>
+              <h3 class="text-xl font-semibold mb-2">Support Our Team</h3>
+              <p class="text-emerald-100">Empower teachers and coordinators</p>
+            </div>
+            <div class="bg-white/10 backdrop-blur-lg p-8 rounded-2xl border border-white/20 shadow-2xl">
+              <i data-lucide="target" class="w-16 h-16 mx-auto mb-4 text-amber-300" ></i>
+              <h3 class="text-xl font-semibold mb-2">Scale with Quality</h3>
+              <p class="text-emerald-100">Grow without losing barakah</p>
+            </div>
+          </div>
+          
+          <div class="bg-white/20 backdrop-blur-lg rounded-3xl border border-white/30 p-10 shadow-2xl">
+            <p class="text-3xl md:text-4xl italic font-light leading-relaxed mb-6">
+              "With Allah's help, this can become a model Quran learning system that others will look up to."
+            </p>
+            <div class="w-24 h-1 bg-gradient-to-r from-transparent via-amber-400 to-transparent mx-auto" ></div>
+          </div>
+        </div>
+      </section>
+
+      
+      <section id="qa" class="min-h-screen flex items-center px-6 py-20 bg-gradient-to-br from-amber-50 to-emerald-50">
+        <div class="max-w-5xl mx-auto text-center">
+          <div class="mb-8">
+            <div class="w-24 h-24 mx-auto bg-gradient-to-br from-emerald-600 to-teal-700 rounded-full flex items-center justify-center shadow-2xl">
+              <i data-lucide="message-square" class="w-12 h-12 text-white" ></i>
+            </div>
+          </div>
+          
+          <h2 class="text-5xl md:text-6xl font-bold mb-6 text-gray-800">Questions & Discussion</h2>
+          <div class="w-24 h-1 bg-gradient-to-r from-emerald-600 via-amber-500 to-teal-600 mx-auto mb-8" ></div>
+          
+          <p class="text-2xl text-gray-600 mb-16">
+            Open floor for concerns, suggestions, and clarifications
+          </p>
+          
+          <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-white p-8 rounded-2xl shadow-xl border-t-4 border-emerald-600 hover:shadow-2xl transition-shadow">
+              <div class="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <i data-lucide="target" class="w-8 h-8 text-emerald-600" ></i>
+              </div>
+              <h3 class="text-2xl font-semibold mb-3 text-gray-800">Priorities</h3>
+              <p class="text-gray-600">Which features matter most to you?</p>
+            </div>
+            
+            <div class="bg-white p-8 rounded-2xl shadow-xl border-t-4 border-blue-600 hover:shadow-2xl transition-shadow">
+              <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <i data-lucide="calendar" class="w-8 h-8 text-blue-600" ></i>
+              </div>
+              <h3 class="text-2xl font-semibold mb-3 text-gray-800">Timeline</h3>
+              <p class="text-gray-600">When should we start the rollout?</p>
+            </div>
+            
+            <div class="bg-white p-8 rounded-2xl shadow-xl border-t-4 border-purple-600 hover:shadow-2xl transition-shadow">
+              <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <i data-lucide="users" class="w-8 h-8 text-purple-600" ></i>
+              </div>
+              <h3 class="text-2xl font-semibold mb-3 text-gray-800">Pilot Batch</h3>
+              <p class="text-gray-600">Which group should begin first?</p>
+            </div>
+          </div>
+          
+          <div class="mt-16 bg-gradient-to-r from-emerald-600 to-teal-700 text-white p-8 rounded-2xl shadow-2xl">
+            <p class="text-xl font-light">
+              جَزَاكُمُ اللّهُ خَيْراً
+            </p>
+            <p class="text-lg mt-2">Thank you for your time and consideration</p>
+          </div>
+        </div>
+      </section>
+
+      
+      <div id="progressIndicator" class="fixed bottom-6 left-6 bg-gradient-to-r from-emerald-600 to-teal-700 text-white rounded-full shadow-2xl px-5 py-3 text-sm font-semibold z-40 border-2 border-amber-400">1 / 20</div>
+    </div>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const sections = [
+        { id: 'intro', title: 'Introduction', icon: 'book-open' },
+        { id: 'why', title: 'Why Digitization', icon: 'target' },
+        { id: 'challenges', title: 'Current Challenges', icon: 'alert-triangle' },
+        { id: 'vision', title: 'Our Vision', icon: 'star' },
+        { id: 'platform', title: 'Platform Features', icon: 'zap' },
+        { id: 'enrollment', title: 'Enrollment Flow', icon: 'users' },
+        { id: 'dashboard', title: 'Student Dashboard', icon: 'activity' },
+        { id: 'student-dashboard-example', title: 'Student Dashboard Example', icon: 'activity' },
+        { id: 'surah-details', title: 'Surah Module', icon: 'book-open' },
+        { id: 'coordinator-dashboard-example', title: 'Coordinator Dashboard', icon: 'users' },
+        { id: 'teacher-dashboard-example', title: 'Teacher Dashboard', icon: 'book-open' },
+        { id: 'admin-dashboard-example', title: 'Admin Panel', icon: 'shield' },
+        { id: 'architecture', title: 'Technical Architecture', icon: 'zap' },
+        { id: 'security', title: 'Security & Compliance', icon: 'shield' },
+        { id: 'zoom-integration', title: 'Zoom Integration', icon: 'video' },
+        { id: 'roadmap', title: 'Implementation Roadmap', icon: 'calendar' },
+        { id: 'benefits', title: 'Benefits', icon: 'heart' },
+        { id: 'management-dashboard-example', title: 'Management Dashboard', icon: 'bar-chart-3' },
+        { id: 'closing', title: 'Closing Statement', icon: 'star' },
+        { id: 'qa', title: 'Q&A', icon: 'message-square' }
+      ];
+
+      const navPanel = document.getElementById('navPanel');
+      const navToggle = document.getElementById('navToggle');
+      const navOverlay = document.getElementById('navOverlay');
+      const navItems = document.getElementById('navItems');
+      const progressIndicator = document.getElementById('progressIndicator');
+      const navButtons = [];
+
+      const toggleNav = () => {
+        const isHidden = navPanel.classList.contains('translate-x-full');
+        navPanel.classList.toggle('translate-x-full');
+        navOverlay.classList.toggle('hidden');
+        navToggle.setAttribute('aria-expanded', isHidden ? 'true' : 'false');
+      };
+
+      navToggle?.addEventListener('click', toggleNav);
+      navOverlay?.addEventListener('click', () => {
+        if (!navPanel.classList.contains('translate-x-full')) {
+          toggleNav();
+        }
+      });
+
+      sections.forEach((section, index) => {
+        const button = document.createElement('button');
+        button.type = 'button';
+        button.className = 'nav-item w-full text-left px-4 py-3 rounded-lg transition-all flex items-center gap-3 hover:bg-emerald-50 text-gray-700';
+        button.innerHTML = `<i data-lucide="${section.icon}" class="w-4 h-4"></i><span class="text-sm">${section.title}</span>`;
+        button.addEventListener('click', () => {
+          document.getElementById(section.id)?.scrollIntoView({ behavior: 'smooth' });
+          if (!navPanel.classList.contains('translate-x-full')) {
+            toggleNav();
+          }
+        });
+        navItems.appendChild(button);
+        navButtons.push(button);
+      });
+
+      const setActiveSection = (index) => {
+        navButtons.forEach((btn, idx) => {
+          btn.classList.toggle('active', idx === index);
+        });
+        if (progressIndicator) {
+          progressIndicator.textContent = `${index + 1} / ${sections.length}`;
+        }
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const index = sections.findIndex((section) => section.id === entry.target.id);
+            if (index >= 0) {
+              setActiveSection(index);
+            }
+          }
+        });
+      }, { threshold: 0.4 });
+
+      sections.forEach((section) => {
+        const element = document.getElementById(section.id);
+        if (element) {
+          observer.observe(element);
+        }
+      });
+
+      setActiveSection(0);
+
+      if (window.lucide) {
+        lucide.createIcons();
+      }
+    });
+  </script>
+</body>
+</html>
